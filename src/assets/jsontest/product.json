@@ -1,0 +1,690 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "T-Shirts"
+    },
+    {
+      "id": 2,
+      "name": "Long Sleeves"
+    },
+    {
+      "id": 3,
+      "name": "Winter Collection"
+    },
+    {
+      "id": 4,
+      "name": "Summer Collection"
+    },
+    {
+      "id": 5,
+      "name": "Party Wear"
+    },
+    {
+      "id": 6,
+      "name": "Designer Picked"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Nam tempus",
+      "price": "36",
+      "dealPrice": "36",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "37",
+      "imgUrl": "p1.jpg",
+      "category": "5"
+    },
+    {
+      "id": "2",
+      "name": "Nunc at neque",
+      "price": "2",
+      "dealPrice": "19",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "3",
+      "imgUrl": "p2.jpg",
+      "category": "5"
+    },
+    {
+      "id": "3",
+      "name": "In vitae nisl ",
+      "price": "38",
+      "dealPrice": "79",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "24",
+      "imgUrl": "p3.jpg",
+      "category": "6"
+    },
+    {
+      "id": "4",
+      "name": "Ut iaculis",
+      "price": "37",
+      "dealPrice": "20",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "20",
+      "imgUrl": "p4.jpg",
+      "category": "6"
+    },
+    {
+      "id": "5",
+      "name": "Proin hendrerit ",
+      "price": "3",
+      "dealPrice": "15",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "14",
+      "imgUrl": "p5.jpg",
+      "category": "6"
+    },
+    {
+      "id": "6",
+      "name": "Praesent quis ",
+      "price": "24",
+      "dealPrice": "21",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "200",
+      "imgUrl": "p6.jpg",
+      "category": "2"
+    },
+    {
+      "id": "7",
+      "name": "Nulla et lacus ",
+      "price": "20",
+      "dealPrice": "65",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "25",
+      "imgUrl": "p7.jpg",
+      "category": "2"
+    },
+    {
+      "id": "8",
+      "name": "Donec pulvinar",
+      "price": "14",
+      "dealPrice": "62",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "26",
+      "imgUrl": "p8.jpg",
+      "category": "2"
+    },
+    {
+      "id": "9",
+      "name": "Cras vel mi ",
+      "price": "200",
+      "dealPrice": "94",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "34",
+      "imgUrl": "p9.jpg",
+      "category": "2"
+    },
+    {
+      "id": "10",
+      "name": "Donec ultricies",
+      "price": "25",
+      "dealPrice": "70",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "83",
+      "imgUrl": "p10.jpg",
+      "category": "2"
+    },
+    {
+      "id": "11",
+      "name": "Aliquam ",
+      "price": "33",
+      "dealPrice": "17",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "88",
+      "imgUrl": "p11.jpg",
+      "category": "2"
+    },
+    {
+      "id": "12",
+      "name": "Sed eu tellus ",
+      "price": "32",
+      "dealPrice": "26",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "41",
+      "imgUrl": "p12.jpg",
+      "category": "2"
+    },
+    {
+      "id": "13",
+      "name": "Vestibulum a lacus",
+      "price": "15",
+      "dealPrice": "34",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "97",
+      "imgUrl": "p13.jpg",
+      "category": "2"
+    },
+    {
+      "id": "14",
+      "name": "Curabitur sed mi ",
+      "price": "13",
+      "dealPrice": "83",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "20",
+      "imgUrl": "p14.jpg",
+      "category": "3"
+    },
+    {
+      "id": "15",
+      "name": "Nullam eget nibh",
+      "price": "18",
+      "dealPrice": "88",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "98",
+      "imgUrl": "p15.jpg",
+      "category": "3"
+    },
+    {
+      "id": "16",
+      "name": "Integer gravida felis ",
+      "price": "30",
+      "dealPrice": "41",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "13",
+      "imgUrl": "p16.jpg",
+      "category": "3"
+    },
+    {
+      "id": "17",
+      "name": "Quisque sit amet ",
+      "price": "19",
+      "dealPrice": "97",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "38",
+      "imgUrl": "p17.jpg",
+      "category": "3"
+    },
+    {
+      "id": "18",
+      "name": "Nulla eu magna",
+      "price": "16",
+      "dealPrice": "20",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "72",
+      "imgUrl": "p18.jpg",
+      "category": "3"
+    },
+    {
+      "id": "19",
+      "name": "Mauris finibus libero",
+      "price": "22",
+      "dealPrice": "98",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "13",
+      "imgUrl": "p19.jpg",
+      "category": "3"
+    },
+    {
+      "id": "20",
+      "name": "Phasellus tempor ",
+      "price": "6",
+      "dealPrice": "13",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "18",
+      "imgUrl": "p20.jpg",
+      "category": "4"
+    },
+    {
+      "id": "21",
+      "name": "In non nibh ",
+      "price": "4",
+      "dealPrice": "38",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "30",
+      "imgUrl": "p21.jpg",
+      "category": "4"
+    },
+    {
+      "id": "22",
+      "name": "Aenean rutrum ",
+      "price": "23",
+      "dealPrice": "72",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "19",
+      "imgUrl": "p22.jpg",
+      "category": "4"
+    },
+    {
+      "id": "23",
+      "name": "Nam non ante ",
+      "price": "27",
+      "dealPrice": "37",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "16",
+      "imgUrl": "p23.jpg",
+      "category": "4"
+    },
+    {
+      "id": "24",
+      "name": "Malesuada odio ",
+      "price": "12",
+      "dealPrice": "100",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "22",
+      "imgUrl": "p24.jpg",
+      "category": "4"
+    },
+    {
+      "id": "25",
+      "name": "Sed eu tellus ",
+      "price": "31",
+      "dealPrice": "20",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "6",
+      "imgUrl": "p25.jpg",
+      "category": "4"
+    },
+    {
+      "id": "26",
+      "name": "Nunc non ",
+      "price": "77",
+      "dealPrice": "79",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "4",
+      "imgUrl": "p26.jpg",
+      "category": "5"
+    },
+    {
+      "id": "27",
+      "name": "Vestibulum a lacus",
+      "price": "11",
+      "dealPrice": "30",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "23",
+      "imgUrl": "p27.jpg",
+      "category": "5"
+    },
+    {
+      "id": "28",
+      "name": "Proin hendrerit ",
+      "price": "29",
+      "dealPrice": "20",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "27",
+      "imgUrl": "p28.jpg",
+      "category": "5"
+    },
+    {
+      "id": "29",
+      "name": "Praesent quis ",
+      "price": "5",
+      "dealPrice": "3",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "12",
+      "imgUrl": "p29.jpg",
+      "category": "5"
+    },
+    {
+      "id": "30",
+      "name": "Proin sit amet",
+      "price": "21",
+      "dealPrice": "1",
+      "size": [
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "black",
+        "blue",
+        "white",
+        "red"
+      ],
+      "sku": "31",
+      "imgUrl": "p30.jpg",
+      "category": "5"
+    }
+  ]
+}

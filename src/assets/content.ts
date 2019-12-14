@@ -1,104 +1,277 @@
+export const APICollection = {
+    localShop: 'http://localhost:3000/products',
+    shopCategory: 'http://localhost:3000/category',
+};
 
-export const APICollection =  {
-            randomUserAPI: 'https://api.randomuser.me/',
-            weather: ''
-        };
+export const ContentLoremIpsum = {
+    paragraphOne: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui 
+    dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaer
+    at voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis aute
+    m vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
 
-export const topNavigationStyleOneContent = [
+    paragraphTwo: `At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti a
+    tque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+     mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est elig
+     endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibu
+     sdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
+    ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.`,
+
+};
+
+export const MagazineStyleOneCarouselContent = [
     {
-        one: {
-            faIcon: 'gift',
-            title: 'Lorem ipsum dolor $500'
-        },
-        two: {
-            currency: [
-                {id: 0, title: 'USD'},
-                {id: 1, title: 'EUR'},
-            ],
-            language: [
-                {id: 0, faIcon: '', title: 'English'},
-                {id: 1, faIcon: '', title: 'German'},
-                {id: 2, faIcon: '', title: 'French'},
-                {id: 3, faIcon: '', title: 'Spanish'},
-                {id: 4, faIcon: '', title: 'Nepalese'},
-            ],
-            other: [
-                {id: 0, title: 'Lorem', url: '#'},
-                {id: 1, title: 'Donec', url: '#'},
-                {id: 2, title: 'Morbi', url: '#'},
-            ],
-        },
-        three: [
-            {id: 0, title: 'Lorem', url: '#'},
-            {id: 1, title: 'Donec', url: '#'},
-            {id: 2, title: 'Morbi', url: '#'},
-        ],
-        four: [
-            {id: 0, faIcon: 'facebook', url: '#'},
-            {id: 1, faIcon: 'twitter', url: '#'},
-            {id: 2, faIcon: 'instagram', url: '#'},
-            {id: 3, faIcon: 'youtube', url: '#'},
-            {id: 4, faIcon: 'linkedin', url: '#'},
-        ]
-
-    }
-];
-
-export const FeatureStyleFiveContent = [
+        id: 0,
+        caption: 'Quo voluptas nulla pariatur dolore magnam aliquam quaerat?',
+        title: 'Inventore veritatis',
+        img: 'seminar-1.jpg'
+    },
     {
         id: 1,
-        title: 'Vivamus ut sapien mattis',
-        urlText: 'Placerat interdum',
-        img: 'f-2.jpg'
+        caption: 'Quis autem vel eum iure eos qui ratione voluptatem.',
+        title: 'Consequuntur magni',
+        img: 'seminar-2.jpg'
+    },
+];
+
+
+export const FooterMenuStyleOneContent = [
+    {
+        id: 0,
+        title: 'Mauris nec',
+        content: [
+            {
+                menuIitle: 'Nulla ac',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Phasellus placerat',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Ass non odio ',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Donec maximus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Etiam laoreet',
+                menuUrl: 'http://google.com'
+            },
+
+        ]
+    },
+    {
+        id: 1,
+        title: 'Sed sit amet',
+        content: [
+            {
+                menuIitle: 'Nulla ac',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Donec maximus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Etiam laoreet',
+                menuUrl: 'http://google.com'
+            },
+        ]
     },
     {
         id: 2,
-        title: 'Nunc luctus lectus ornare',
-        urlText: 'Cursus risus',
-        img: 'f-1.jpg'
-    },
-    {
-        id: 4,
-        title: 'Etiam sodales magna facilisi',
-        urlText: 'Interdum et',
-        img: 'f-4.jpg'
+        title: 'Nam lacinia',
+        content: [
+            {
+                menuIitle: 'Nulla ac',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Phasellus placerat',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Ass non odio ',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+        ]
     },
     {
         id: 3,
-        title: 'In laoreet lorem fringilla',
-        urlText: 'Interdum et',
-        img: 'f-3.jpg'
+        title: 'Etiam eget ante',
+        content: [
+            {
+                menuIitle: 'In dapibus arcu',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Phasellus placerat',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Ass non odio ',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: 'Sed sollicitudin massa',
+        content: [
+            {
+                menuIitle: 'Nulla ac',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Phasellus placerat',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Ass non odio ',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Donec maximus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Vivamus vel',
+                menuUrl: 'http://google.com'
+            },
+            {
+                menuIitle: 'Etiam laoreet',
+                menuUrl: 'http://google.com'
+            },
+
+        ]
     },
 ];
 
-export const BlogPostStyleThreeContent = [
+export const BlogPostStyleTwoContent = [
     {
         id: 1,
         title: 'Etiam porta sem malesuada',
+        price: '29.99',
         author: 'Jane Austin',
-        img: 'b-4.jpg',
+        img: 'blog-1.jpg',
         shortContent: 'Dducimus qui blanditiis praesentium voluptatum blanditiis ad veras tu du.'
     },
     {
         id: 2,
         title: 'Morbi euismod nisl',
+        price: '11.99',
         author: 'Jean W. Stokes',
-        img: 'b-2.jpg',
+        img: 'blog-2.jpg',
         shortContent: 'Pellentesque nec felis sit amet turpis viverra ullamcorper vel ut sapien.'
     },
     {
         id: 3,
         title: 'Pellentesque aliquet eros',
+        price: '28.5',
         author: 'Jean W. Stokes',
-        img: 'b-3.jpg',
+        img: 'blog-3.jpg',
         shortContent: 'Vestibulum commodo lectus at nulla rhoncus, in commodo velit dapibus.\n'
     },
+];
+
+export const FeatureStyleTwoContent = [
     {
-        id: 4,
-        title: 'Praesent rutrum purus',
-        author: 'Marz Watson',
-        img: 'b-1.jpg',
-        shortContent: 'Integer pellentesque sapien sed libero placerat, accumsan interdum mi tempor.\n'
+        id: 0,
+        caption: 'Quo voluptas nulla pariatur dolore aliquam quaerat?',
+        title: 'Inventore veritatis',
+        faIcon: 'plane'
+    },
+    {
+        id: 1,
+        caption: 'Quis autem vel eum iure eos qui ratione voluptatem.',
+        title: 'Consequuntur magni',
+        faIcon: 'trophy'
+    },
+    {
+        id: 1,
+        caption: 'Praesent nec nibh venenatis, convallis odio sit amet.',
+        title: 'Aliquam iaculis',
+        faIcon: 'gift'
+    },
+];
+
+export const FeatureStyleThreeContent = [
+    {
+        id: 0,
+        title: 'Vivamus ut sapien mattis, auctor massa quis, bibendum massa.',
+        caption: `Etiam faucibus fermentum enim ac sodales. Aenean non dapibus quam. 
+        Praesent placerat convallis velit et cursus. Ut bibendum purus at enim faucibus commodo bibendum et nisi. 
+        Vestibulum ac orci odio. Quisque in nunc lobortis, faucibus velit eu, iaculis eros. 
+        Morbi venenatis justo non fermentum accumsan. Phasellus sit amet metus vel nulla finibus tincidunt vitae id tellus. 
+        Fusce dignissim velit quam, et semper magna sagittis eu. Mauris ac lacus sit amet ex dictum ornare ullamcorper eget erat.`,
+        faIcon: 'plane',
+        img: 'feature-5.jpg'
+    },
+    {
+        id: 1,
+        title: 'Nunc luctus lectus in tellus ornare, et pellentesque massa mattis.',
+        caption: `Quisque felis tortor, egestas ac accumsan eget, consectetur quis tortor. Morbi ultrices dignissim magna 
+        eu scelerisque. Sed efficitur ligula eget leo consectetur gravida. Aliquam congue leo ex, quis vestibulum diam 
+        consequat sed. In hac habitasse platea dictumst. Sed ultrices vulputate ligula, vitae varius nunc tristique in. 
+        Cras venenatis porttitor eros, quis feugiat nisl.`,
+        faIcon: 'trophy',
+        img: 'feature-6.jpg'
+    },
+    {
+        id: 2,
+        title: 'Etiam sodales magna vitae tellus facilisis, in laoreet lorem fringilla.\n',
+        caption: `Pellentesque porta, elit quis sollicitudin pretium, massa neque accumsan purus, ac rhoncus est tellus 
+        a quam. Nunc varius, justo in bibendum bibendum, sem metus malesuada libero, nec dictum metus magna ac elit. 
+        Integer feugiat risus eget ante congue, vel tempor libero faucibus. Donec sit amet enim urna. Nullam eget 
+        elementum arcu. Aliquam rutrum placerat interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+        Cras ac molestie tellus. Fusce scelerisque eros arcu, sed cursus risus interdum vel. `,
+        faIcon: 'gift',
+        img: 'feature-7.jpg'
+    },
+];
+
+export const FeatureStyleFourContent = [
+    {
+        id: 0,
+        title: 'Auctor massa quis, bibendum massa.',
+        faIcon: 'plane',
+        img: 'feature-8.jpg',
+        price: 299
+    },
+    {
+        id: 1,
+        title: 'Ornare, et pellentesque massa.',
+        faIcon: 'trophy',
+        img: 'feature-9.jpg',
+        price: 359
     },
 ];
 
@@ -219,5 +392,27 @@ export const PortfolioStyleOneContent = [
                 url: 'http://linkedin.com'
             },
         ]
+    },
+];
+
+
+export const MasterHeaderStyleTwoCarouselContent = [
+    {
+        id: 0,
+        caption: 'Quo voluptas nulla pariatur dolore magnam aliquam quaerat? Weit über den nebligen Bergen kalt In tiefe Kerker und alte Höhlen. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
+        title: 'Inventore veritatis pariatur',
+        img: 'mh-3.jpg'
+    },
+    {
+        id: 1,
+        caption: 'Quis autem vel eum iure eos qui ratione voluptatem. Etiam sodales magna vitae tellus facilisis. magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam',
+        title: 'Consequuntur magni iure',
+        img: 'mh-2.jpg'
+    },
+    {
+        id: 1,
+        caption: 'Quis autem vel eum iure eos qui ratione voluptatem. Vestibulum ac orci odio. Quisque in nunc lobortis, faucibus velit eu, iaculis eros. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
+        title: 'Consequuntur magni iure orci odio',
+        img: 'mh-1.jpg'
     },
 ];

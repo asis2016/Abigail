@@ -25,7 +25,7 @@ class TopNavigationStyleTwo extends Component<IProps, IState>{
     }
 
     async componentDidMount() {
-        await fetch(APICollection.randomUserAPI)
+        await fetch('')
             .then(response => response.json())
             .then(data => this.setState({
                 firstName: data.results[0].name.first,

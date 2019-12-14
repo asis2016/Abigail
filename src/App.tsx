@@ -1,28 +1,25 @@
 import React, {Component} from 'react';
-import {Col, Container, Row} from "react-bootstrap";
-import ProfileCardStyleOne from "./components/ProfileCardStyleOne/ProfileCardStyleOne";
-import TopNavigationStyleTwo from "./components/TopNavigationStyleTwo/TopNavigationStyleTwo";
+import {Card, Col, Container, Row} from "react-bootstrap";
+import PopularThisWeekStyleOne from "./components/PopularThisWeekStyleOne/PopularThisWeekStyleOne";
+import {AppBase} from "./App.style";
+import PopularProductStyleOne from "./components/PopularProductStyleOne/PopularProductStyleOne";
 
 interface IProps {
 }
 
 interface IState {
-    products?: object;
+    products?: Array<any>;
     title?: string;
     template?: string;
 }
 
-interface IProduct {
-    sku:number;
-    title:string;
-}
 
 class App extends Component<IProps, IState> {
 
     constructor(props: IProps) {
         super(props);
         this.state = {
-            products: {},
+            products: [],
             title: 'My Button',
             template: 'light',
         }
@@ -33,53 +30,37 @@ class App extends Component<IProps, IState> {
         this.setState({template: 'dark', title: 'Changed title'});
     };
 
-    async componentDidMount(){
-
-        const url = 'https://raw.githubusercontent.com/BestBuyAPIs/open-data-set/master/products.json';
-        const response = await fetch(url);
-        const data = await response.json();
-
-        console.log(response);
-        console.log(data);
-
-        console.log(typeof data);
-
-        this.setState({products: data})
-
-        console.log(this.state.products)
-
+    componentDidMount() {
+        fetch('http://localhost:3000/products')
+            .then(res => res.json())
+            .then(result => {
+                this.setState({products: result});
+            })
     }
 
     render() {
-        return <Container>
 
-            {/* TOP NAVIGATION */}
-            <TopNavigationStyleTwo />
+        const bigData: any = this.state.products;
+
+        return <AppBase>
 
 
-            <Row>
-                <Col md={2}>
+            {/* Popular Product Style One */}
+            <PopularProductStyleOne title={"Popular Products "}
+                                    caption={"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."}
+                                    selectProductCategoryId={"6"}
+            />
 
-                    <button onClick={this.changeColor}>
-                        {this.state.title}
-                    </button>
 
-                    {/* Profile Card Style One */}
-                    <ProfileCardStyleOne/>
 
-                </Col>
+            <Container>
 
-                <Col md={10}>
 
-                    {
-                        this.state.products.map((i)=>
-                            <h6></h6>
-                        )
-                    }
+                {/* TOP NAVIGATION */}
 
-                </Col>
-            </Row>
-        </Container>
+
+            </Container>
+        </AppBase>
     }
 };
 
