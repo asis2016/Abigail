@@ -1,7 +1,8 @@
-import React, {Component} from "react";
-import {Col, Container, Row} from "react-bootstrap";
+import React, {Component, useState} from "react";
+import {Col, Container, Row, Toast} from "react-bootstrap";
 import {APICollection, BlogPostStyleTwoContent} from "../../assets/content";
 import {PopularProductStyleOneBase} from "./PopularProductStyleOne.style";
+import {ToastStyleOne} from "../ToastStyleOne/ToastStyleOne";
 
 interface IProps {
     title: string;
@@ -11,14 +12,19 @@ interface IProps {
 
 interface IState {
     popularProducts?: Array<any>;
+    cart?: boolean;
+    cartMessage?: string;
 }
 
 class PopularProductStyleOne extends Component<IProps, IState> {
+
 
     constructor(props: IProps) {
         super(props);
         this.state = {
             popularProducts: [],
+            cart: false,
+            cartMessage: 'empty',
         }
     };
 
@@ -34,8 +40,14 @@ class PopularProductStyleOne extends Component<IProps, IState> {
     render() {
 
         const popularProducts: any = this.state.popularProducts;
-
         return <PopularProductStyleOneBase>
+
+            <ToastStyleOne title={'Wishlist'}
+                           msg={this.state.cartMessage}
+                           delay={3000}
+                           show={this.state.cart}
+                           onclose={() => this.setState({cart: false})}/>
+
             <Container>
 
                 <Row className="pb-5">
@@ -63,7 +75,12 @@ class PopularProductStyleOne extends Component<IProps, IState> {
                                                         className="btn btn-primary-abigail">
                                                     Add to cart
                                                 </button>
-                                                <button type="button" className="btn btn-secondary-outline-abigail">
+                                                <button type="button"
+                                                        className="btn btn-secondary-outline-abigail"
+                                                        onClick={() => {
+                                                            this.setState({cart: true})
+                                                            this.setState({cartMessage: i.name + ` added to wishlist.`})
+                                                        }}>
                                                     Wishlist
                                                 </button>
                                             </div>
@@ -77,6 +94,8 @@ class PopularProductStyleOne extends Component<IProps, IState> {
             </Container>
         </PopularProductStyleOneBase>
     }
-}
+
+
+};
 
 export default PopularProductStyleOne;
