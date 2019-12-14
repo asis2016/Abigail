@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import {Toast} from "react-bootstrap";
 import {ToastStyleOneBase} from "./ToastStyleOne.style";
 
-
 interface IProps {
     title: any;
     msg: any;
