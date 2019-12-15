@@ -58,7 +58,7 @@ class PopularProductStyleOne extends Component<IProps, IState> {
                 </Row>
 
                 <Row>
-                    {popularProducts.filter((i: any) => i.category === this.props.selectProductCategoryId)
+                    {popularProducts.filter((i: any) => i.category === '6')
                         .map((i: any) =>
                             <Col xs={4} key={i.id}>
                                 <div className="card mb-4 box-shadow">

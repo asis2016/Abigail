@@ -26,6 +26,7 @@
     "eject": "react-scripts eject",
     "db_product": "json-server --watch --port 9001 src/server/product.json",
     "db_category": "json-server --watch --port 9002 src/server/category.json"
+    "server": "json-server --watch --port 3001 src/assets/jsontest/product.json"
   },
   "eslintConfig": {
     "extends": "react-app"

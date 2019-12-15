@@ -1,18 +1,6 @@
 import React, {Component} from 'react';
-import {Card, Col, Container, Row} from "react-bootstrap";
-import PopularThisWeekStyleOne from "./components/PopularThisWeekStyleOne/PopularThisWeekStyleOne";
 import {AppBase} from "./App.style";
 import PopularProductStyleOne from "./components/PopularProductStyleOne/PopularProductStyleOne";
-import ProductPageStyleOne from "./components/ProductPageStyleOne/ProductPageStyleOne";
-
-import {
-    BrowserRouter,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import Customer from "./pages/Customer";
-import CustomerDetail from "./pages/CustomerDetail";
 
 interface IProps {
 }
@@ -50,20 +38,18 @@ class App extends Component<IProps, IState> {
 
     render() {
 
-        const bigData: any = this.state.products;
-
         return <AppBase>
 
-            <BrowserRouter>
+          {/*  <Shop/>*/}
 
-                <Link to={'/'}> Home </Link>
 
-                <Switch>
-                    <Route path={'/'} exact component={Customer} />
+            {/* Popular Product Style One */}
+            <PopularProductStyleOne title={"Popular Products "}
+                                    caption={"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."}
+                                    selectProductCategoryId={"6"}
+            />
 
-                    <Route path={'/view/:id'} exact component={CustomerDetail}/>
-                </Switch>
-            </BrowserRouter>
+
 
             <div className="pt-5"></div>
             {/* Products Page */}
