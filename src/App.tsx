@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
-import PopularThisWeekStyleOne from "./components/PopularThisWeekStyleOne/PopularThisWeekStyleOne";
 import {AppBase} from "./App.style";
 import PopularProductStyleOne from "./components/PopularProductStyleOne/PopularProductStyleOne";
+import Shop from "./pages/Shop";
 
 interface IProps {
 }
@@ -40,9 +40,10 @@ class App extends Component<IProps, IState> {
 
     render() {
 
-        const bigData: any = this.state.products;
-
         return <AppBase>
+
+
+            <Shop/>
 
 
             {/* Popular Product Style One */}
@@ -59,6 +60,12 @@ class App extends Component<IProps, IState> {
                 {/* TOP NAVIGATION */}
 
 
+            </Container>
+
+            <Container fluid>
+                <Row>
+                    <Col></Col>
+                </Row>
             </Container>
         </AppBase>
     }

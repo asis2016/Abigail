@@ -1,6 +1,6 @@
 export const APICollection = {
-    localShop: 'http://localhost:3000/products',
-    shopCategory: 'http://localhost:3000/category',
+    localShop: 'http://localhost:3001/products',
+    shopCategory: 'http://localhost:3001/category',
 };
 
 export const ContentLoremIpsum = {
