@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {TopNavigationStyleTwoBase} from './TopNavigationStyleTwo.style';
 import {Col, Row} from "react-bootstrap";
 import ProfileCardStyleOne from "../ProfileCardStyleOne/ProfileCardStyleOne";
-import {APICollection} from "../../assets/content";
+import {APICollection} from "../../server/content";
 
 interface IProps {
 }

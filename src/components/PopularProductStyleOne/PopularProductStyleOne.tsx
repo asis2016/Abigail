@@ -1,6 +1,6 @@
 import React, {Component, useState} from "react";
 import {Col, Container, Row, Toast} from "react-bootstrap";
-import {APICollection, BlogPostStyleTwoContent} from "../../assets/content";
+import {APICollection, BlogPostStyleTwoContent} from "../../server/content";
 import {PopularProductStyleOneBase} from "./PopularProductStyleOne.style";
 import {ToastStyleOne} from "../ToastStyleOne/ToastStyleOne";
 

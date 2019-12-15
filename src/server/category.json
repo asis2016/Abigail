@@ -1,0 +1,28 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "T-Shirts"
+    },
+    {
+      "id": 2,
+      "name": "Long Sleeves"
+    },
+    {
+      "id": 3,
+      "name": "Winter Collection"
+    },
+    {
+      "id": 4,
+      "name": "Summer Collection"
+    },
+    {
+      "id": 5,
+      "name": "Party Wear"
+    },
+    {
+      "id": 6,
+      "name": "Designer Picked"
+    }
+  ]
+}

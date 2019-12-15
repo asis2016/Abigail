@@ -1,7 +1,4 @@
-export const APICollection = {
-    localShop: 'http://localhost:3000/products',
-    shopCategory: 'http://localhost:3000/category',
-};
+
 
 export const ContentLoremIpsum = {
     paragraphOne: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
