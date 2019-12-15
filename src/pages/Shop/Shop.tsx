@@ -1,14 +1,15 @@
 import React, {Component} from "react";
-import {Breadcrumb, Button, Card, Col, Container, ListGroup, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, ListGroup, Row} from "react-bootstrap";
 import {APICollection} from "../../server/config";
 import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
 import JumboTron from "../../components/JumboTron/JumboTron";
+import {Link, RouteComponentProps, withRouter} from "react-router-dom";
+import axios from 'axios';
 
 interface IProps {
-
 }
 
-interface IState {
+interface IFormState {
     productList?: Array<any>;
     productCategoryList?: Array<any>;
     productCategoryID?: string;
@@ -16,41 +17,33 @@ interface IState {
 
 const product = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-class Shop extends Component<IProps, IState> {
+interface IState {
+    products: Array<any>;
+    categoryID: string;
+}
 
-    constructor(props: IProps) {
+class Shop extends Component<RouteComponentProps<any>, IState> {
+
+    constructor(props: RouteComponentProps) {
         super(props);
         this.state = {
-            productList: [],
-            productCategoryList: [],
-            productCategoryID: '2'
+            products: [],
+            categoryID: this.props.match.params.catID,
         }
     };
 
-    componentDidMount() {
-        fetch(APICollection.apiProduct)
-            .then(res => res.json())
-            .then(result => {
-                this.setState({productList: result})
-            });
-
-        /* Fetch category */
-        fetch(APICollection.apiCategory)
-            .then(res => res.json())
-            .then(result => {
-                this.setState({productCategoryList: result})
+    componentDidMount(): void {
+        axios.get('http://localhost:9001/products')
+            .then(data => {
+                this.setState({products: data.data})
             })
     };
 
-    changeCategory = (catId: string): void => {
-        this.setState({productCategoryID: catId});
-    };
-
-
     render() {
-        console.log(this.state.productCategoryID);
-        const pList: any = this.state.productList;
-        const pCList: any = this.state.productCategoryList;
+
+        const products = this.state.products;
+        console.log(this.state.products);
+
         return <>
 
             {/* JumboTron Component */}
@@ -64,11 +57,10 @@ class Shop extends Component<IProps, IState> {
                     <Col md={2}>
 
                         <ListGroup variant="flush">
-                            {pCList.map((i: any) =>
+                            {product.map((i: any) =>
                                 <ListGroup.Item>
                                     <input type="button"
                                            value={i.id}
-                                           onClick={() => this.changeCategory(i.id)}
                                     />
                                 </ListGroup.Item>
                             )}
@@ -83,13 +75,15 @@ class Shop extends Component<IProps, IState> {
                         <BreadCrumb levelTwoText={'Category 2'}/>
 
                         <Row>
-                            {pList.filter((i: any) => i.category === this.state.productCategoryID)
+                            {products.filter((i: any) => i.category === this.state.categoryID)
                                 .map((i: any) =>
                                     <Col md={3}>
                                         <Card className="m-2">
                                             <Card.Img variant="top" src={require("../../assets/images/" + i.imgUrl)}/>
                                             <Card.Body>
-                                                <Card.Title>{i.name}</Card.Title>
+                                                <Card.Title>
+                                                    <Link to={`shop-item/${i.id}`}>{i.name}</Link>
+                                                </Card.Title>
                                                 <Card.Text>
                                                     $ {i.price}
                                                 </Card.Text>
@@ -109,4 +103,4 @@ class Shop extends Component<IProps, IState> {
     }
 };
 
-export default Shop;
+export default withRouter(Shop);

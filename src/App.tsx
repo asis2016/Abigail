@@ -4,14 +4,14 @@ import Shop from "./pages/Shop/Shop";
 import NavBar from "./components/Navbar/Navbar";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Home from "./pages/Home/Home";
-import {ShopItem} from "./pages/Shop/ShopItem";
+import {FooterMenuStyleTwo} from "./components/FooterMenuStyleTwo/FooterMenuStyleTwo";
+import ShopItem from "./pages/Shop/ShopItem";
 
 class App extends Component {
 
     render() {
 
         return <AppBase>
-
 
 
             <BrowserRouter>
@@ -21,22 +21,21 @@ class App extends Component {
                 <Switch>
 
                     {/* testing */}
-                    <Route path={"/shop-item"}>
-                        <ShopItem/>
-                    </Route>
+                    <Route path={"/shop-item/:id"} exact component={ShopItem} />
                     {/* testing */}
 
-                    <Route path={"/shop"}>
-                        <Shop/>
-                    </Route>
+                    <Route path={"/shop/:catID"} exact component={Shop} />
+
                     <Route path={"/"}>
                         <Home/>
                     </Route>
 
 
-
                 </Switch>
             </BrowserRouter>
+
+            {/* Footer */}
+            <FooterMenuStyleTwo/>
 
 
         </AppBase>

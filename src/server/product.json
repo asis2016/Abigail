@@ -20,7 +20,7 @@
       ],
       "sku": "37",
       "imgUrl": "p1.jpg",
-      "category": "5"
+      "category": "1"
     },
     {
       "id": "2",
@@ -86,7 +86,7 @@
       ],
       "sku": "20",
       "imgUrl": "p4.jpg",
-      "category": "6"
+      "category": "1"
     },
     {
       "id": "5",
@@ -416,7 +416,7 @@
       ],
       "sku": "13",
       "imgUrl": "p19.jpg",
-      "category": "3"
+      "category": "1"
     },
     {
       "id": "20",
