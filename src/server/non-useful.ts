@@ -396,23 +396,3 @@ export const PortfolioStyleOneContent = [
 ];
 
 
-export const MasterHeaderStyleTwoCarouselContent = [
-    {
-        id: 0,
-        caption: 'Quo voluptas nulla pariatur dolore magnam aliquam quaerat? Weit über den nebligen Bergen kalt In tiefe Kerker und alte Höhlen. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
-        title: 'Inventore veritatis pariatur',
-        img: 'mh-3.jpg'
-    },
-    {
-        id: 1,
-        caption: 'Quis autem vel eum iure eos qui ratione voluptatem. Etiam sodales magna vitae tellus facilisis. magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam',
-        title: 'Consequuntur magni iure',
-        img: 'mh-2.jpg'
-    },
-    {
-        id: 1,
-        caption: 'Quis autem vel eum iure eos qui ratione voluptatem. Vestibulum ac orci odio. Quisque in nunc lobortis, faucibus velit eu, iaculis eros. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur',
-        title: 'Consequuntur magni iure orci odio',
-        img: 'mh-1.jpg'
-    },
-];

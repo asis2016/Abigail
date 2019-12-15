@@ -1,8 +1,8 @@
 import React, {Component, useState} from "react";
 import {Col, Container, Row, Toast} from "react-bootstrap";
-import {APICollection, BlogPostStyleTwoContent} from "../../server/content";
 import {PopularProductStyleOneBase} from "./PopularProductStyleOne.style";
 import {ToastStyleOne} from "../ToastStyleOne/ToastStyleOne";
+import {APICollection} from "../../server/config";
 
 interface IProps {
     title: string;
@@ -29,7 +29,7 @@ class PopularProductStyleOne extends Component<IProps, IState> {
     };
 
     componentDidMount() {
-        fetch(APICollection.localShop)
+        fetch(APICollection.apiProduct)
             .then(response => response.json())
             .then(result => {
                 this.setState({popularProducts: result})

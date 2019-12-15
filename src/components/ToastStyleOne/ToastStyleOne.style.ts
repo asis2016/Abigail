@@ -4,9 +4,10 @@ import styled from "styled-components";
 export const ToastStyleOneBase = styled.div`
 
 .toast{
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
+    z-index: 99999;
 }
 
 `;
