@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 import axios from "axios";
 import {Container, Row} from "react-bootstrap";
 import {BlogRecentBase} from "./BlogRecent.style";
@@ -13,6 +12,8 @@ interface IProps {
 
 interface IState {
     blog: Array<any>;
+    tags: Array<any>;
+    authors: Array<any>;
 }
 
 class BlogRecent extends Component<IProps, IState> {
@@ -20,7 +21,9 @@ class BlogRecent extends Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            blog: []
+            blog: [],
+            tags: [],
+            authors: []
         }
     };
 
@@ -29,11 +32,45 @@ class BlogRecent extends Component<IProps, IState> {
             .then(result => {
                 this.setState({blog: result.data})
             })
+
+        /* Tags */
+        axios.get(APICollection.apiTag)
+            .then(result => {
+                this.setState({tags: result.data})
+            });
+
+        /* Authors */
+        axios.get(APICollection.apiAuthor)
+            .then(result => {
+                this.setState({authors: result.data})
+            });
+    };
+
+    /*
+    * Get Blog Tag Name
+    * */
+    public getBlogTag = (id: string): any => {
+        const tags = this.state.tags;
+        return <>
+            {tags.filter((i: any) => i.id === id).map((i: any) => <>{i.title}</>)}
+        </>;
+    };
+
+    /*
+    * Get Blog Author Name
+    * */
+    public getBlogAuthor = (id: string): any => {
+        const author = this.state.authors;
+        return <>
+            {author.filter((i: any) => i.id === id).map((i: any) => <>{i.name}</>)}
+        </>
     };
 
     render() {
 
         const blogTopThree = this.state.blog;
+        const tags = this.state.tags;
+        const authors = this.state.authors;
 
         return <BlogRecentBase>
             <Container>
@@ -46,10 +83,12 @@ class BlogRecent extends Component<IProps, IState> {
                         <div className="col-md-6" key={i.id}>
                             <CardBlog id={i.id}
                                       featuredImage={i.featuredImage}
-                                      title={i.title}
-                                      excerpt={i.excerpt}
+                                      title={i.title.substring(0, 30)}
+                                      excerpt={i.excerpt.substring(0, 200)}
                                       date={i.date}
-                                      author={i.author}/>
+                                      tag={this.getBlogTag(i.tag)}
+                                      author={this.getBlogAuthor(i.author)}
+                            />
                         </div>
                     )}
 

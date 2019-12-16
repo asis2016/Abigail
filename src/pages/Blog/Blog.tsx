@@ -47,7 +47,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
     /*
     * Get Blog Tag Name
     * */
-    getBlogTag = (id: string): any => {
+    public getBlogTag = (id: string): any => {
         const tags = this.state.tags;
         return <>
             {tags.filter((i: any) => i.id === id).map((i: any) => <>{i.title}</>)}
@@ -57,7 +57,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
     /*
     * Get Blog Author Name
     * */
-    getBlogAuthor = (id: string): any => {
+    public getBlogAuthor = (id: string): any => {
         const author = this.state.authors;
         return <>
             {author.filter((i: any) => i.id === id).map((i: any) => <>{i.name}</>)}

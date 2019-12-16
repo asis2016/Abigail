@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Button, Card, Col, Container, Row} from "react-bootstrap";
+import {Breadcrumb, Button, Card, Col, Container, Row} from "react-bootstrap";
 import {APICollection} from "../../server/config";
 import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
 import JumboTron from "../../components/JumboTron/JumboTron";
@@ -18,6 +18,7 @@ interface IState {
     products: Array<any>;
     categorys: Array<any>;
     categoryID: string;
+    categoryTitle: string;
 }
 
 class Shop extends Component<RouteComponentProps<any>, IState> {
@@ -28,6 +29,7 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
             products: [],
             categorys: [],
             categoryID: this.props.match.params.catID,
+            categoryTitle: ''
         }
     };
 
@@ -47,8 +49,6 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
 
         const products = this.state.products;
         const categorys = this.state.categorys;
-        console.log(this.state.products);
-
         return <>
 
             {/* JumboTron Component */}
@@ -65,18 +65,15 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                         <h3 className={"mt-5 mb-3"}>Category</h3>
                         <ul className="list-group list-group-flush">
                             {categorys.map((i) =>
-                                <>
-                                    <ListGroupMenu title={i.title} url={'http:goog.gl'} id={i.id}/>
-                                </>
+                                <li className="list-group-item" key={i.id}>
+                                    <ListGroupMenu title={i.title} url={`/shop/` + i.id} id={i.id}/>
+                                </li>
                             )}
                         </ul>
 
                     </Col>
 
                     <Col md={9}>
-
-                        {/* BreadCrumb Component */}
-                        <BreadCrumb levelTwoText={'Category 2'}/>
 
                         <Row>
                             {products.filter((i: any) => i.category === this.state.categoryID)

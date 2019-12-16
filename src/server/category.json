@@ -18,11 +18,15 @@
     },
     {
       "id": 5,
-      "title": "Party Wear"
+      "title": "Trending Now"
     },
     {
       "id": 6,
       "title": "Designer Picked"
+    },
+    {
+      "id": 7,
+      "title": "Party Wear"
     }
   ]
 }
