@@ -25,7 +25,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "db_product": "json-server --watch --port 9001 src/server/product.json",
-    "db_category": "json-server --watch --port 9002 src/server/category.json"
+    "db_category": "json-server --watch --port 9002 src/server/category.json",
+    "db_blog": "json-server --watch --port 9003 src/server/blog.json",
+    "db_tag": "json-server --watch --port 9004 src/server/tag.json",
+    "db_author": "json-server --watch --port 9005 src/server/author.json"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -17,19 +17,11 @@ export const MasterHeaderStyleTwoBase = styled.div`
     z-index: 1;
   }
   
-  .search{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100px;
-    z-index: 3;
-  }
-  
   .carousel-item-content{
         position: absolute;
         left: 0px;
         right: 0px;
-        bottom: 200px;
+        bottom: 100px;
         z-index: 3;
         border-radius: 4px;
   }

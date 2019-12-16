@@ -14,9 +14,16 @@ h1, h2, h3, h4, h5, h6{
     color: ${DefaultStyle.primaryColor};
 }
 
+h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
 p, .btn{
     font-family: ${DefaultStyle.secondaryFont};
-    font-size: 1rem;
+    font-size: 14px;
     color: ${DefaultStyle.secondaryColorTwo};
 }
 

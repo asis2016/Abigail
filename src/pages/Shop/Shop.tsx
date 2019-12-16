@@ -6,9 +6,6 @@ import JumboTron from "../../components/JumboTron/JumboTron";
 import {Link, RouteComponentProps, withRouter} from "react-router-dom";
 import axios from 'axios';
 
-interface IProps {
-}
-
 interface IFormState {
     productList?: Array<any>;
     productCategoryList?: Array<any>;

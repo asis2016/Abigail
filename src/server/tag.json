@@ -1,0 +1,32 @@
+{
+  "tag": [
+    {
+      "id":"1",
+      "title": "Latest in store"
+    },
+    {
+      "id":"2",
+      "title": "Trending Now"
+    },
+    {
+      "id":"3",
+      "title": "New Arrival"
+    },
+    {
+      "id":"4",
+      "title": "Christmas Shopping"
+    },
+    {
+      "id":"5",
+      "title": "Happy Hours"
+    },
+    {
+      "id":"6",
+      "title": "Summer Collection"
+    },
+    {
+      "id":"7",
+      "title": "Winter Collection"
+    }
+  ]
+}

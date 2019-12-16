@@ -35,7 +35,7 @@ class ShopItem extends Component<RouteComponentProps<any>, IFormState> {
         console.log(this.state.product);
         const img = this.state.product.imgUrl;
         const products = this.state.product;
-        console.log(products.length)
+        console.log(products)
 
 
         return <ShopItemBase>
@@ -44,7 +44,8 @@ class ShopItem extends Component<RouteComponentProps<any>, IFormState> {
                 <Row>
 
                     <div className="col-lg-6 col-md-12 col-sm-12">
-                        <img src={require('../../assets/images/p1.jpg')} alt=""/>
+                        {products.imgUrl}
+                        <img src={require('../../assets/images/' + products.imgUrl)} alt=""/>
                     </div>
 
                     <div className="col-lg-6 col-md-12 col-sm-12">

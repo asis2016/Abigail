@@ -1,5 +1,5 @@
-import React, {Component, useState} from "react";
-import {Col, Container, Row, Toast} from "react-bootstrap";
+import React, {Component} from "react";
+import {Col, Container, Row} from "react-bootstrap";
 import {PopularProductStyleOneBase} from "./PopularProductStyleOne.style";
 import {ToastStyleOne} from "../ToastStyleOne/ToastStyleOne";
 import {APICollection} from "../../server/config";

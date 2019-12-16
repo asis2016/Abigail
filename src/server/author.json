@@ -1,0 +1,64 @@
+{
+  "author": [
+    {
+      "id": "1",
+      "name": "Jen Trew",
+      "gender": "f",
+      "imgUrl": "author-1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Birgit Mahood",
+      "gender": "f",
+      "imgUrl": "author-2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Wilma Millen",
+      "gender": "f",
+      "imgUrl": "author-3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Alisha Borrego",
+      "gender": "f",
+      "imgUrl": "author-4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Jeanine Acy",
+      "gender": "f",
+      "imgUrl": "author-5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Markus Rexrode",
+      "gender": "m",
+      "imgUrl": "author-6.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Dewitt Norville",
+      "gender": "m",
+      "imgUrl": "author-7.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Todd Hockett",
+      "gender": "m",
+      "imgUrl": "author-8.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Cruz Slevin",
+      "gender": "m",
+      "imgUrl": "author-9.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Mauricio Wittrock",
+      "gender": "m",
+      "imgUrl": "author-10.jpg"
+    }
+  ]
+}
