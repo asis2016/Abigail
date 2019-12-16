@@ -150,7 +150,7 @@ export const FooterMenuStyleTwo: FC<IProps> = (props) => {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-4 pt-2 col-one">
-                    <a href="#">
+                    <a href="http://googl.gl">
                         {/*<img className="logo"
                              src={require("../../assets/images/logo.png")}
                         />*/}
@@ -175,47 +175,47 @@ export const FooterMenuStyleTwo: FC<IProps> = (props) => {
                     <h5 className="pt-5">Lorem ipsum feugiat</h5>
                     <ul>
                         <li>
-                            <a href="#">Faucibus mattis felis</a>
+                            <a href="http://google.gl">Faucibus mattis felis</a>
                         </li>
                         <li>
-                            <a href="#">Enim urna massa</a>
+                            <a href="http://google.gl">Enim urna massa</a>
                         </li>
                         <li>
-                            <a href="#">Integer feugiat Aliquam</a>
+                            <a href="http://google.gl">Integer feugiat Aliquam</a>
                         </li>
                         <li>
-                            <a href="#">In bibendum ultrices</a>
+                            <a href="http://google.gl">In bibendum ultrices</a>
                         </li>
                         <li>
-                            <a href="#">Nunc luctus lectus</a>
+                            <a href="http://google.gl">Nunc luctus lectus</a>
                         </li>
                     </ul>
                 </div>
                 <div className="col-4">
                     <h5>Bibendum</h5>
                     <ul>
-                        <li><a href="#">Metus Faucibus Interdum</a></li>
-                        <li><a href="#">Vel tempor scelerisque</a></li>
-                        <li><a href="#">Libero Faucibus cursus</a></li>
-                        <li><a href="#">Varius justo risus</a></li>
+                        <li><a href="http://google.gl">Metus Faucibus Interdum</a></li>
+                        <li><a href="http://google.gl">Vel tempor scelerisque</a></li>
+                        <li><a href="http://google.gl">Libero Faucibus cursus</a></li>
+                        <li><a href="http://google.gl">Varius justo risus</a></li>
                     </ul>
 
                     <h5 className="pt-5">Lorem ipsum</h5>
                     <ul>
                         <li>
-                            <a href="#">Faucibus sodales</a>
+                            <a href="http://google.gl">Faucibus sodales</a>
                         </li>
                         <li>
-                            <a href="#">Enim urna vitae</a>
+                            <a href="http://google.gl">Enim urna vitae</a>
                         </li>
                         <li>
-                            <a href="#">Integer feugiat quis</a>
+                            <a href="http://google.gl">Integer feugiat quis</a>
                         </li>
                         <li>
-                            <a href="#">In bibendum pretium</a>
+                            <a href="http://google.gl">In bibendum pretium</a>
                         </li>
                         <li>
-                            <a href="#">Nunc varius, justo</a>
+                            <a href="http://google.gl">Nunc varius, justo</a>
                         </li>
                     </ul>
                 </div>
@@ -224,22 +224,22 @@ export const FooterMenuStyleTwo: FC<IProps> = (props) => {
 
         <div className="row no-gutters social">
             <div className="col">
-                <a className="social-inner" href="#">
+                <a className="social-inner" href="http://google.gl">
                     <i className="fa fa-twitter"></i> Twitter
                 </a>
             </div>
             <div className="col">
-                <a className="social-inner" href="#">
+                <a className="social-inner" href="http://google.gl">
                     <i className="fa fa-facebook"></i> Facebook
                 </a>
             </div>
             <div className="col">
-                <a className="social-inner" href="#">
+                <a className="social-inner" href="http://google.gl">
                     <i className="fa fa-instagram"></i> Instagram
                 </a>
             </div>
             <div className="col">
-                <a className="social-inner" href="#">
+                <a className="social-inner" href="http://google.gl">
                     <i className="fa fa-youtube"></i> Youtube
                 </a>
             </div>

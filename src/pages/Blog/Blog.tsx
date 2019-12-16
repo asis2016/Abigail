@@ -1,17 +1,20 @@
 import React, {Component} from "react";
-import {RouteComponentProps, withRouter} from "react-router-dom";
+import {Link, RouteComponentProps, withRouter} from "react-router-dom";
 import axios from 'axios';
 import {Col, Container, Row} from "react-bootstrap";
 import JumboTron from "../../components/JumboTron/JumboTron";
 import {APICollection} from "../../server/config";
+import {ListGroupMenu} from "../../components/ListGroupMenu/ListGroupMenu";
+import {CardBlog} from "../../components/CardBlog/CardBlog";
 
 interface IState {
     posts: Array<any>;
     tags: Array<any>;
     authors: Array<any>;
-}
+};
 
 class Blog extends Component<RouteComponentProps<any>, IState> {
+
 
     constructor(props: RouteComponentProps) {
         super(props);
@@ -84,7 +87,9 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
                         <h3 className={"mt-5 mb-3"}>Popular Tags</h3>
                         <ul className="list-group list-group-flush">
                             {tags.map((i) =>
-                                <li className="list-group-item" key={i.id}>{i.title}</li>
+                                <>
+                                    <ListGroupMenu title={i.title} url={'http:goog.gl'} id={i.id}/>
+                                </>
                             )}
                         </ul>
 
@@ -100,7 +105,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
                                     <img className="mr-3" src="" alt=""/>
                                     <div className="media-body">
                                         <h6 className="mt-0">{i.name}</h6>
-                                        <a href="#">Read Article</a>
+                                        <a href="http://google.gl">Read Article</a>
                                     </div>
                                 </div>
                             </div>
@@ -109,18 +114,16 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
                     </Col>
 
                     <Col md={8}>
+
                         {posts.map((i) =>
-                            <div className="card flex-md-row mb-4 box-shadow h-md-150">
-                                <div className="card-body d-flex flex-column align-items-start">
-                                    <span className="badge badge-primary">{this.getBlogTag(i.Tag)}</span>
-                                    <h5 className="mt-3">{i.Title.substring(0, 40)}</h5>
-                                    <div className="mt-1 text-muted">{i.Date} by {this.getBlogAuthor(i.Author)}</div>
-                                    <p className="mt-2">{i.Excerpt.substring(0,200)}...</p>
-                                </div>
-                                <img className="card-img-right flex-auto d-none d-md-block"
-                                     alt=""
-                                     src={require("../../assets/images/blog/" + i.Featured_Image)}
-                                     style={{width: '200px', objectFit: 'cover'}}
+                            <div key={i.id}>
+                                <CardBlog id={i.id}
+                                          featuredImage={i.featuredImage}
+                                          title={i.title.substring(0, 40)}
+                                          excerpt={i.excerpt.substring(0, 200)}
+                                          date={i.date}
+                                          tag={this.getBlogTag(i.tag)}
+                                          author={this.getBlogAuthor(i.author)}
                                 />
                             </div>
                         )}
@@ -131,15 +134,15 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
                                 <li className="page-item disabled">
                                     <span className="page-link">Previous</span>
                                 </li>
-                                <li className="page-item"><a className="page-link" href="#">1</a></li>
+                                <li className="page-item"><a className="page-link" href="http://google.gl">1</a></li>
                                 <li className="page-item active" aria-current="page">
-                                <span className="page-link">         2
-                                <span className="sr-only">(current)</span>
-                                </span>
+                            <span className="page-link">         2
+                            <span className="sr-only">(current)</span>
+                            </span>
                                 </li>
-                                <li className="page-item"><a className="page-link" href="#">3</a></li>
+                                <li className="page-item"><a className="page-link" href="http://google.gl">3</a></li>
                                 <li className="page-item">
-                                    <a className="page-link" href="#">Next</a>
+                                    <a className="page-link" href="http://google.gl">Next</a>
                                 </li>
                             </ul>
                         </nav>

@@ -22,16 +22,11 @@ class App extends Component {
 
                 <Switch>
 
-                    {/* testing */}
-                    <Route path={"/shop-item/:id"} exact component={ShopItem}/>
-                    {/* testing */}
+                    <Route path={"/blog"} exact component={Blog}/>
+                    <Route path={"/blog-item/:id"} exact component={BlogItem}/>
 
                     <Route path={"/shop/:catID"} exact component={Shop}/>
-
-                    <Route path={"/blog"} exact component={Blog}/>
-                    <Route path={"/blog-item"}>
-                        <BlogItem/>
-                    </Route>
+                    <Route path={"/shop-item/:id"} exact component={ShopItem}/>
 
                     <Route path={"/"}>
                         <Home/>

@@ -1,27 +1,31 @@
 import React, {Component} from "react";
+import {RouteComponentProps, withRouter} from "react-router-dom";
 import axios from "axios";
 import {Col, Container, Row} from "react-bootstrap";
 import {BlogItemBase} from "./BlogItem.style";
+import {APICollection} from "../../server/config";
 
 
 interface IProps {
 }
 
 interface IState {
+    id: string;
     blogItem: any;
 }
 
-class BlogItem extends Component<IProps, IState> {
+class BlogItem extends Component<RouteComponentProps<any>, IState> {
 
-    constructor(props: IProps) {
+    constructor(props: RouteComponentProps) {
         super(props);
         this.state = {
+            id: this.props.match.params.id,
             blogItem: {}
         }
     };
 
     componentDidMount(): void {
-        axios.get('http://localhost:9003/blog/1')
+        axios.get(`${APICollection.apiBlog + '/' + this.state.id}`)
             .then(result => {
                 this.setState({blogItem: result.data})
             })
@@ -30,7 +34,7 @@ class BlogItem extends Component<IProps, IState> {
 
     render() {
 
-        console.log(this.state.blogItem)
+        const blogItem = this.state.blogItem;
 
         return <BlogItemBase>
             <Container>
@@ -38,19 +42,21 @@ class BlogItem extends Component<IProps, IState> {
                 <Row>
                     <Col>
 
-                                <div className="blog-item-featured-img"
-                                     style={{backgroundImage: 'url("https://via.placeholder.com/900x400")'}}></div>
+                        {/*<div className="blog-item-featured-img">
 
-                                <h1 className="caption mt-4">From the Category</h1>
-                                <hr/>
-                                <h1>{this.state.blogItem.Title}</h1>
+                        </div>*/}
 
-                                <div className="excerpt">
 
-                                </div>
-                                <div className="content">
+                        <h1 className="caption mt-4">From the Category</h1>
+                        <hr/>
+                        <h2>{this.state.blogItem.title}</h2>
 
-                                </div>
+                        <div className="excerpt">
+                            <p>{blogItem.excerpt}</p>
+                        </div>
+                        <div className="content">
+
+                        </div>
 
 
                     </Col>
@@ -61,4 +67,4 @@ class BlogItem extends Component<IProps, IState> {
     }
 };
 
-export default BlogItem;
+export default withRouter(BlogItem);

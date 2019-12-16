@@ -1,10 +1,12 @@
 import React, {Component} from "react";
-import {Button, Card, Col, Container, ListGroup, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Row} from "react-bootstrap";
 import {APICollection} from "../../server/config";
 import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
 import JumboTron from "../../components/JumboTron/JumboTron";
 import {Link, RouteComponentProps, withRouter} from "react-router-dom";
 import axios from 'axios';
+import {ListGroupMenu} from "../../components/ListGroupMenu/ListGroupMenu";
+import {CardShopItem} from "../../components/CardShopItem/CardShopItem";
 
 interface IFormState {
     productList?: Array<any>;
@@ -12,10 +14,9 @@ interface IFormState {
     productCategoryID?: string;
 }
 
-const product = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 interface IState {
     products: Array<any>;
+    categorys: Array<any>;
     categoryID: string;
 }
 
@@ -25,20 +26,27 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
         super(props);
         this.state = {
             products: [],
+            categorys: [],
             categoryID: this.props.match.params.catID,
         }
     };
 
     componentDidMount(): void {
-        axios.get('http://localhost:9001/products')
+        axios.get(APICollection.apiProduct)
             .then(data => {
                 this.setState({products: data.data})
+            });
+
+        axios.get(APICollection.apiCategory)
+            .then(data => {
+                this.setState({categorys: data.data})
             })
     };
 
     render() {
 
         const products = this.state.products;
+        const categorys = this.state.categorys;
         console.log(this.state.products);
 
         return <>
@@ -48,25 +56,24 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                        content={"Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS"}
             />
 
-            <Container fluid className={"pt-2"}>
+            <Container className={"pt-2"}>
 
                 <Row>
                     <Col md={2}>
 
-                        <ListGroup variant="flush">
-                            {product.map((i: any) =>
-                                <ListGroup.Item>
-                                    <input type="button"
-                                           value={i.id}
-                                    />
-                                </ListGroup.Item>
+                        {/* Category */}
+                        <h3 className={"mt-5 mb-3"}>Category</h3>
+                        <ul className="list-group list-group-flush">
+                            {categorys.map((i) =>
+                                <>
+                                    <ListGroupMenu title={i.title} url={'http:goog.gl'} id={i.id}/>
+                                </>
                             )}
-
-                        </ListGroup>
+                        </ul>
 
                     </Col>
 
-                    <Col md={10}>
+                    <Col md={9}>
 
                         {/* BreadCrumb Component */}
                         <BreadCrumb levelTwoText={'Category 2'}/>
@@ -74,22 +81,10 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                         <Row>
                             {products.filter((i: any) => i.category === this.state.categoryID)
                                 .map((i: any) =>
-                                    <Col md={3}>
-                                        <Card className="m-2">
-                                            <Card.Img variant="top" src={require("../../assets/images/" + i.imgUrl)}/>
-                                            <Card.Body>
-                                                <Card.Title>
-                                                    <Link to={`shop-item/${i.id}`}>{i.name}</Link>
-                                                </Card.Title>
-                                                <Card.Text>
-                                                    $ {i.price}
-                                                </Card.Text>
-                                                <Button variant="primary">Add to Cart</Button>
-                                            </Card.Body>
-                                        </Card>
+                                    <Col md={4} key={i.id}>
+                                        <CardShopItem id={i.id} title={i.title} price={i.price} imgUrl={i.imgUrl}/>
                                     </Col>
                                 )}
-
                         </Row>
 
                     </Col>
