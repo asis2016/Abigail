@@ -15,7 +15,7 @@ export const CardShopItem: FC<IProps> = (props) => {
         <div className="card mb-4 box-shadow">
             <img className="card-img-top"
                  alt=""
-                 src={require("../../assets/images/" + props.imgUrl)}
+                 src={require("../../assets/images/product/" + props.imgUrl)}
             />
             <div className="card-body">
                 <Link to={`/shop-item/` + props.id}><h6>{props.title}</h6></Link>

@@ -6,7 +6,7 @@ interface IProps {
     caption: string;
 }
 
-export const SectionTitleCaption: FC<IProps> = (props) => {
+export const TitleCaptionSection: FC<IProps> = (props) => {
     return <Row className="pb-5">
         <Col md={{span: 6, offset: 3}} className="text-center">
             <h1>{props.title}</h1>

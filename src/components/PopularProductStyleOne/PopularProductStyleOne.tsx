@@ -3,8 +3,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import {PopularProductStyleOneBase} from "./PopularProductStyleOne.style";
 import {ToastStyleOne} from "../ToastStyleOne/ToastStyleOne";
 import {APICollection} from "../../server/config";
-import {SectionTitleCaption} from "../SectionTitleCaption/SectionTitleCaption";
 import {CardShopItem} from "../CardShopItem/CardShopItem";
+import {TitleCaptionSection} from "../TitleCaptionSection/SectionTitleCaption";
 
 interface IProps {
     selectProductCategoryId: string;
@@ -50,7 +50,7 @@ class PopularProductStyleOne extends Component<IProps, IState> {
 
             <Container>
 
-                <SectionTitleCaption title={"Popular Products"}
+                <TitleCaptionSection title={"Popular Products"}
                                      caption={"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."}/>
 
                 <Row>

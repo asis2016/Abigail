@@ -13,7 +13,7 @@ export const MasterHeaderStyleTwoBase = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.2);
     z-index: 1;
   }
   
@@ -21,7 +21,7 @@ export const MasterHeaderStyleTwoBase = styled.div`
         position: absolute;
         left: 0px;
         right: 0px;
-        bottom: 100px;
+        bottom: 70px;
         z-index: 3;
         border-radius: 4px;
   }
@@ -37,8 +37,9 @@ export const MasterHeaderStyleTwoBase = styled.div`
   }
   
   .carousel-item{
-    height: 100vh;
+    height: calc(100vh - 120px);
     background-size: cover;
+    background-position:center;
   }
   
   .carousel-control-next-icon, .carousel-control-prev-icon{

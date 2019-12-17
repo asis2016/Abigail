@@ -1,12 +1,11 @@
 import React, {Component} from "react";
-import {Breadcrumb, Button, Card, Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import {APICollection} from "../../server/config";
-import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
-import JumboTron from "../../components/JumboTron/JumboTron";
-import {Link, RouteComponentProps, withRouter} from "react-router-dom";
+import {RouteComponentProps, withRouter} from "react-router-dom";
 import axios from 'axios';
 import {ListGroupMenu} from "../../components/ListGroupMenu/ListGroupMenu";
 import {CardShopItem} from "../../components/CardShopItem/CardShopItem";
+import {TitleCaptionJumbotron} from "../../components/TitleCaptionJumbotron/JumboTron";
 
 interface IFormState {
     productList?: Array<any>;
@@ -52,7 +51,7 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
         return <>
 
             {/* JumboTron Component */}
-            <JumboTron title={"Shop"}
+            <TitleCaptionJumbotron title={"Shop"}
                        content={"Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS"}
             />
 

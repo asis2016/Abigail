@@ -3,8 +3,8 @@ import axios from "axios";
 import {Container, Row} from "react-bootstrap";
 import {BlogRecentBase} from "./BlogRecent.style";
 import {APICollection} from "../../server/config";
-import {SectionTitleCaption} from "../SectionTitleCaption/SectionTitleCaption";
 import {CardBlog} from "../CardBlog/CardBlog";
+import {TitleCaptionSection} from "../TitleCaptionSection/SectionTitleCaption";
 
 
 interface IProps {
@@ -75,7 +75,7 @@ class BlogRecent extends Component<IProps, IState> {
         return <BlogRecentBase>
             <Container>
 
-                <SectionTitleCaption title={"From the Blog"}
+                <TitleCaptionSection title={"From the Blog"}
                                      caption={"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."}/>
 
                 <Row>

@@ -25,13 +25,26 @@ export const DefaultStyle = {
 
 };
 
-const themes = {
+export const themes = {
     light: {
         foreground: "#000000",
         background: "#eeeeee"
     },
     dark: {
         foreground: "#ffffff",
-        background: "#222222"
+        background: " <i className=\"fas fa-cart-plus\"></i>"
     }
 };
+
+export const faIcon = {
+    cart: 'fas fa-cart-plus',
+    eye: 'fas fa-eye',
+    gift:'fas fa-gifts',
+    delivery: 'fas fa-truck',
+    search: 'fas fa-search',
+    globe:'fas fa-globe',
+    basket: 'fas fa-shopping-basket',
+    user: 'fas fa-user-circle'
+
+};
+

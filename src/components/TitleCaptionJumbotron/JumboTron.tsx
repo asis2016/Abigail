@@ -13,7 +13,7 @@ interface IActionButton1 {
     title: string;
 }
 
-export const JumboTron: FC<IProps> = (props) => {
+export const TitleCaptionJumbotron: FC<IProps> = (props) => {
     return <section className="jumbotron text-center" style={{marginTop:'50px'}}>
         <div className="container" style={{maxWidth: '40rem'}}>
             <h1 className="jumbotron-heading">
@@ -25,5 +25,3 @@ export const JumboTron: FC<IProps> = (props) => {
         </div>
     </section>
 };
-
-export default JumboTron;

@@ -37,7 +37,7 @@ export const MasterHeaderStyleTwo: FC<IProps> = (props) => {
                     <div className="overlay"></div>
 
 
-                    <div className="container-fluid carousel-item-content">
+                    <div className="container carousel-item-content">
                         <div className="row">
                             <div className="col-md-8 offset-md-2">
                                 <h1>{item.title}</h1>

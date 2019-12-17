@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import {Link, RouteComponentProps, withRouter} from "react-router-dom";
+import {RouteComponentProps, withRouter} from "react-router-dom";
 import axios from 'axios';
 import {Col, Container, Row} from "react-bootstrap";
-import JumboTron from "../../components/JumboTron/JumboTron";
 import {APICollection} from "../../server/config";
 import {ListGroupMenu} from "../../components/ListGroupMenu/ListGroupMenu";
 import {CardBlog} from "../../components/CardBlog/CardBlog";
+import {TitleCaptionJumbotron} from "../../components/TitleCaptionJumbotron/JumboTron";
 
 interface IState {
     posts: Array<any>;
@@ -74,7 +74,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
         return <>
 
             {/* JumboTron Component */}
-            <JumboTron title={"Blog"}
+            <TitleCaptionJumbotron title={"Blog"}
                        content={"Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS"}
             />
 
