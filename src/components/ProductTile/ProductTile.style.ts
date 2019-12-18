@@ -1,12 +1,10 @@
 import styled from "styled-components";
+import {color, DefaultStyle} from "../../assets/style/style";
 
 
 export const ProductTileBase = styled.div`
-
-.modal-dialog{
-        max-width: 90% !important;
-}
-
-
-
+    position: relative;
+    z-index: 2;
+    background-color: ${color.white};
+    padding: ${DefaultStyle.sectionPaddingTopBottom} 0px;
 `;

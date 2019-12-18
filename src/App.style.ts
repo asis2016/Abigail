@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {DefaultStyle} from "./assets/style/style";
+import {color, DefaultStyle, font} from "./assets/style/style";
 
 interface IProps {
     template?: string;
@@ -7,99 +7,100 @@ interface IProps {
 
 export const AppBase = styled.div<IProps>`
 
-/*background-color: ${DefaultStyle.bgColor};*/
+font-family: ${font.secondary.family};
 
 h1, h2, h3, h4, h5, h6{
-    font-family: ${DefaultStyle.primaryFont};
-    color: ${DefaultStyle.primaryColor};
+    font-family: ${font.primary.family};
+    color: ${color.text};
 }
 
-h3{
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-p, .btn{
-    font-family: ${DefaultStyle.secondaryFont};
-    font-size: 14px;
-    color: ${DefaultStyle.secondaryColorTwo};
+h1{
+    font-size: 1.8rem;
 }
 
 .caption{
-    font-family: ${DefaultStyle.cursiveFont};
-    color: ${DefaultStyle.cursiveColor};
+    font-family: ${font.caption.family};
+    color: ${color.primary};
     font-size: 1.5rem;
 }
 
+h3{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+p, a, .nav-link, .text-muted, label{
+    font-family: ${font.secondary.family};
+}
+
+p, label{
+    font-size: 14px;
+    color: ${color.text};
+}
+
+a{
+    font-size: 14px;
+    color: ${color.primary};
+}
+
+a:hover{
+    color: ${color.primaryLight};
+}
+
+.text-muted{
+    font-size: 13px;
+}
+
 /* Buttons */
-.btn-primary-${DefaultStyle.themeName}{
-  background: ${DefaultStyle.primaryColor};
-  color:#fff;
+.btn-primary{
+  background-color: ${color.primary};
+  border-color: ${color.primary};
+  color: ${color.white};
 }
 
-.btn-primary-outline-${DefaultStyle.themeName}{
+.btn-primary:hover {
+  background-color:  ${color.primaryLight};;
+  color: ${color.white};
+}
+
+.btn-primary-outline{
   background: none;
-  border-color: ${DefaultStyle.primaryColor};
-  color:  ${DefaultStyle.primaryColor};
+  border-color: ${color.primary};
+  color: ${color.primary};
 }
 
-.btn-secondary-${DefaultStyle.themeName}{
-  background: ${DefaultStyle.secondaryColorOne};
-  border-color: ${DefaultStyle.secondaryColorOne};
-  color:#fff;
+.btn-secondary{
+    background: ${color.secondary};
+    border-color: ${color.secondary};
+    color: ${color.white};
 }
 
-.btn-secondary-outline-${DefaultStyle.themeName}{
-  border-color: ${DefaultStyle.secondaryColorOne};
-  color:  ${DefaultStyle.secondaryColorOne};
+.btn-secondary-outline{
+  background: none;
+  border-color: ${color.secondary};
+  color: ${color.secondary};
 }
 
-
-/*  useless below */
-
-.colorItem{
-    height: 10px;
-    width: 10px;
-    padding-left: 5px;
-    display: inline;
+/* Badge */
+.badge-primary{
+    background-color: ${color.secondary};
 }
 
-.colorItem-red{
-    background-color: red;
+/* List Group */
+.list-group-item{
+    padding-left:0px;
 }
 
-.colorItem-black{
-    background-color: black;
+/* Input group text */
+.input-group-text{
+    background-color: ${color.primary};
+    border:1px solid ${color.primary};
+    color: ${color.white};
 }
 
-.colorItem-white{
-    background-color: white;
+.form-control{
+    border:1px solid ${color.primary};
 }
-
-.colorItem-blue{
-    background-color: blue;
-}
-
-.colorItem-red{
-
-body {
-    background-color: ${DefaultStyle.bgColor};
-    font-family: ${DefaultStyle.secondaryFont};
-}
-
-.light{
-        background: #cecece;
-        color: #fff;
-}
-
-.dark{
-        background: #121212;
-        color: #fff;
-}
-
-
-
 
 `;

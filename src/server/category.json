@@ -2,31 +2,27 @@
   "category": [
     {
       "id": 1,
-      "title": "T-Shirts"
+      "title": "Bikini"
     },
     {
       "id": 2,
-      "title": "Long Sleeves"
+      "title": "Cultural Dress"
     },
     {
       "id": 3,
-      "title": "Winter Collection"
+      "title": "Jeans"
     },
     {
       "id": 4,
-      "title": "Summer Collection"
+      "title": "Party Wear"
     },
     {
       "id": 5,
-      "title": "Trending Now"
+      "title": "T-Shirts"
     },
     {
       "id": 6,
-      "title": "Designer Picked"
-    },
-    {
-      "id": 7,
-      "title": "Party Wear"
+      "title": "Wedding Dress"
     }
   ]
 }

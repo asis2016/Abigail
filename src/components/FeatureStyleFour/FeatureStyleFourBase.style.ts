@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {color} from "../../assets/style/style";
 
 
 export const FeatureStyleFourBase = styled.div`
@@ -16,24 +17,21 @@ export const FeatureStyleFourBase = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
   }
 
   .col{
     background-size: cover;
+    background-position: top center;
     padding: 50px;
     padding-top: 100px;
     min-height: 80vh;
   }
   
-   h2, .price{
+   h1{
     position: relative;
     z-index: 2;
-    color: #fff;
-  }
-  
-  .price{
-    font-size: 1.5rem;
+    color: ${color.white};
   }
   
   .btn{
@@ -41,8 +39,8 @@ export const FeatureStyleFourBase = styled.div`
     bottom: 20px;
     z-index: 2;
     font-size: 1.5rem;
-    color: #fff;
-    border-color: #fff;
+    border-color: ${color.white};
+    color: ${color.white};
   }
-
+  
 `;

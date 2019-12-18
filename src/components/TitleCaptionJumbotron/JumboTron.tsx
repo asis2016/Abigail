@@ -14,12 +14,12 @@ interface IActionButton1 {
 }
 
 export const TitleCaptionJumbotron: FC<IProps> = (props) => {
-    return <section className="jumbotron text-center" style={{marginTop:'50px'}}>
+    return <section className="jumbotron text-center" style={{paddingTop: '100px', paddingBottom: '100px'}}>
         <div className="container" style={{maxWidth: '40rem'}}>
             <h1 className="jumbotron-heading">
                 {props.title}
             </h1>
-            <p className="lead text-muted">
+            <p className="caption">
                 {props.content}
             </p>
         </div>

@@ -1,8 +1,13 @@
-import {Badge, Col, Container, Form, Row} from "react-bootstrap"
+import {Badge, Col, Container, Form, NavDropdown, Row} from "react-bootstrap"
 import React, {Component} from "react";
 import {ShopItemBase} from "./ShopItem.style";
-import {RouteComponentProps, withRouter} from 'react-router-dom';
+import {Link, RouteComponentProps, withRouter} from 'react-router-dom';
 import axios from 'axios';
+import {APICollection} from "../../server/config";
+import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
+import {faIcon} from "../../assets/style/style";
+import {Base} from "../../model/base";
+import {CustomerReview} from "../../components/CustomerReview/CustomerReview";
 
 interface IValues {
     [key: string]: any;
@@ -10,7 +15,9 @@ interface IValues {
 
 interface IFormState {
     id: string;
+    categoryID: any;
     product: any;
+    category: any;
     values?: IValues[];
 }
 
@@ -20,92 +27,135 @@ class ShopItem extends Component<RouteComponentProps<any>, IFormState> {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            product: {}
+            categoryID: '',
+            product: {},
+            category: {},
         }
     };
 
     componentDidMount(): void {
-        axios.get(`http://localhost:9001/products/${this.state.id}`)
+        axios.get(APICollection.apiProduct + `/` + this.state.id)
             .then(data => {
                 this.setState({product: data.data})
-            })
-    }
+            });
+    };
+
+    /* Get Category Data */
+    getCategoryData = (id: string) => {
+        axios.get(APICollection.apiCategory + `/` + id)
+            .then(result => {
+                this.setState({category: result.data});
+            });
+        const category = this.state.category;
+        return <>
+            <Link to={`/shop/` + category.id}>{category.title}</Link>
+        </>
+    };
 
     render() {
-        console.log(this.state.id);
-        const img = this.state.product.imgUrl;
         const products = this.state.product;
-        console.log(products)
 
+        return <ShopItemBase img={products.img}>
 
-        return <ShopItemBase>
-            {products.length === undefined && (<h1>Not Found</h1>)}
             <Container>
+
+                {/* BreadCrumb Component */}
                 <Row>
+                    <Col>
+                        <BreadCrumb levelOneUrl={'Shop'}
+                                    levelOneText={'Shop'}
+                                    levelTwoText={'Wedding Dress'}/>
+                    </Col>
+                </Row>
 
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                        {products.imgUrl}
-
+                {/* Shop Item */}
+                <Row>
+                    <div className="col-lg-6 pr-5 pt-2">
+                        <div className="product-img">
+                        </div>
                     </div>
 
-                    <div className="col-lg-6 col-md-12 col-sm-12">
-                        <h4>{this.state.product.name}</h4>
+                    <div className="col-lg-6 pr-5 pt-2">
+                        <h1>{products.title}</h1>
                         <hr/>
                         <h1>
-                            <Badge variant="primary">$ {this.state.product.price}</Badge>
+                            <Badge variant="primary">$ {products.price}</Badge>
                         </h1>
 
                         <Form>
-                            <Form.Group as={Row} controlId="formPlaintextEmail">
-                                <Form.Label column sm="2">
-                                    Model
+                            <Form.Group as={Row}>
+                                <Form.Label column sm="3">
+                                    Size
                                 </Form.Label>
-                                <Col sm="10">
-                                    Lorem Ipsum is the product name.
+                                <Col sm="9">
+
                                 </Col>
                             </Form.Group>
 
                             <Form.Group as={Row}>
-                                <Form.Label column sm="2">
-                                    Description
+                                <Form.Label column sm="3">
+                                    Color
                                 </Form.Label>
-                                <Col sm="10">
-                                    Lorem Ipsum is the product name.
-                                    Lorem Ipsum is the product name.
-                                    Lorem Ipsum is the product name.
-                                    Lorem Ipsum is the product name.
+                                <Col sm="9">
+
                                 </Col>
                             </Form.Group>
 
                             <Form.Group as={Row} controlId="formPlaintextEmail">
-                                <Form.Label column sm="2">
-                                    Model
+                                <Form.Label column sm="3">
+                                    SKU
                                 </Form.Label>
-                                <Col sm="10">
-                                    Lorem Ipsum is the product name.
+                                <Col sm="9">
+                                    {products.sku}
                                 </Col>
                             </Form.Group>
 
                             <Form.Group as={Row} controlId="formPlaintextEmail">
-                                <Form.Label column sm="2">
-                                    Model
+                                <Form.Label column sm="3">
+                                    Product Code
                                 </Form.Label>
-                                <Col sm="10">
-                                    Lorem Ipsum is the product name.
+                                <Col sm="9">
+                                    {products.id + `000` + products.sku}
+                                </Col>
+                            </Form.Group>
+
+                            <Form.Group as={Row} controlId="formPlaintextEmail">
+                                <Form.Label column sm="3">
+                                    Category
+                                </Form.Label>
+                                <Col sm="9">
+                                    {this.getCategoryData(products.category)}
                                 </Col>
                             </Form.Group>
                         </Form>
 
                         <hr/>
-                        <button className="btn btn-primary">Add to Cart</button>
+                        <button className="btn btn-primary">
+                            <i className={faIcon.cart}></i> Add to Cart
+                        </button>
+                        <button className="btn btn-secondary ml-2">
+                            <i className={faIcon.heart}></i> Wishlist
+                        </button>
 
                     </div>
                 </Row>
+                {/* Ends: Shop Item */}
 
-                <Row>
-                    <Col md={6}></Col>
+                {/* Customer Review */}
+                <CustomerReview productId={Number(products.id)}/>
 
-                    <Col md={6}></Col>
+                {/* Related Products */}
+                <Row className="mt-3">
+                    <Col>
+                        <div className="card">
+                            <div className="card-header">
+                                Related Products
+                            </div>
+                            <div className="card-body">
+
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
             </Container>}
         </ShopItemBase>

@@ -1,17 +1,20 @@
 import React, {Component} from "react";
-import {Modal} from "react-bootstrap";
+import {Button, Modal} from "react-bootstrap";
 import axios from "axios";
 import {APICollection} from "../../server/config";
 import {ProductTileBase} from "./ProductTile.style";
-import {TitleCaptionSection} from "../TitleCaptionSection/SectionTitleCaption";
+import {TitleCaptionSection} from "../TitleCaptionSection/TitleCaptionSection";
 import {CardProductTile} from "../CardProductTile/CardProductTile";
+import {TitleCaptionSectionExploreAll} from "../TitleCaptionSectionExploreAll/TitleCaptionSectionExploreAll";
 
 interface IProps {
+    page: number;
+    limit: number;
+    categoryID: number;
 }
 
 interface IState {
     product: Array<any>;
-    showModal: boolean;
 }
 
 export class ProductTile extends Component<IProps, IState> {
@@ -20,21 +23,19 @@ export class ProductTile extends Component<IProps, IState> {
         super(props);
         this.state = {
             product: [],
-            showModal: false
         }
     };
 
     componentDidMount(): void {
-        axios.get(APICollection.apiProduct)
+        axios.get(APICollection.apiProduct + `?category=` + this.props.categoryID + `&_limit=` + this.props.limit)
             .then(data => {
                 this.setState({product: data.data})
             })
     };
 
-
     render() {
         const products = this.state.product;
-        console.log(this.state.product);
+        console.log(products)
 
         const showModal = (): any => {
             return <Modal show={true}
@@ -42,26 +43,26 @@ export class ProductTile extends Component<IProps, IState> {
                 <Modal.Body>
                     asd </Modal.Body>
             </Modal>
-        }
-
+        };
 
         return <ProductTileBase>
-
-            <div className="container mt-5 mb-5">
-
-                <TitleCaptionSection title={"Party Collection 19"}
+            <div className="container">
+                <TitleCaptionSection title={"Wedding Dress Collection"}
                                      caption={"Aenean eget turpis sagittis massa porttitor convallis."}/>
 
                 <div className="row">
-                    {products.filter((i) => i.category === '8')
-                        .map((i) =>
-                            <div className="col-md-2" key={i.id}>
-                                <CardProductTile id={i.id}
-                                                 title={i.title}
-                                                 imgUrl={i.imgUrl}/>
-                            </div>
-                        )}
+                    {products.map((i) =>
+                        <div className="col-md-2" key={i.id}>
+                            <CardProductTile id={i.id}
+                                             title={i.title}
+                                             img={i.img}
+                            />
+                        </div>
+                    )}
                 </div>
+
+                <TitleCaptionSectionExploreAll url={'shop/1'}/>
+
             </div>
         </ProductTileBase>
     }

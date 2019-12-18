@@ -1,7 +1,13 @@
 import styled from "styled-components";
+import {color} from "../../assets/style/style";
+import {FC} from "react";
 
 
-export const CardProductTileBase = styled.div`
+interface IProps {
+    img: string;
+}
+
+export const CardProductTileBase = styled.div<IProps>`
 
 .card{
     margin-bottom: 10px;
@@ -14,6 +20,14 @@ export const CardProductTileBase = styled.div`
         padding:0px;
 }
 
+.product-img{
+      background-image: url(${({img}) => img ? (require('../../assets/images/product/' + img)) : ''});
+      background-size: cover;
+      height: 200px;
+      width:100%;
+      overflow: hidden;
+}
+
 .card-body:hover{
     cursor: pointer;
 }
@@ -23,42 +37,30 @@ export const CardProductTileBase = styled.div`
         opacity: 1;
 }
 
-.card-body:hover .product-img{
-      transform: scale(1.5);
-}
-
 .card-body:hover .product-action,
 .card-body:hover .overlay{
         visibility: visible;
         }
 
-img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    }
-
-.product-img{
-        position:relative;
-        background-position: cover;
-        height: 200px;
-        transition: transform .5s ease;
-}
 
 .product-caption{
         visibility:hidden;
          opacity: 0;
-        transition: visibility 0s, opacity 0.9s linear;
+        transition: visibility 0s, opacity 0.4s linear;
         position: absolute;
         z-index: 2;
         bottom:0;
-        background: #121212;
+        background: ${color.primary};
         width: 100%;
-        color: #fff;
+        color: ${color.text};
         text-align: center;
         padding-top:10px;
         padding-bottom:10px;
-        transition: 0.4s;
+}
+
+.product-caption h3{
+        color: ${color.white};
+        margin-bottom: 0;
 }
 
 .product-action{
@@ -72,7 +74,6 @@ img{
         top: 0px;
         z-index: 3;
 }
-
 
 .product-action .quick-view,
 .product-action .add-to-cart{

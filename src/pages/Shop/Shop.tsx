@@ -52,7 +52,7 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
 
             {/* JumboTron Component */}
             <TitleCaptionJumbotron title={"Shop"}
-                       content={"Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS"}
+                       content={"Ut enim ad minima veniam, quis nostrum exercitationem ullam."}
             />
 
             <Container className={"pt-2"}>
@@ -78,7 +78,7 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                             {products.filter((i: any) => i.category === this.state.categoryID)
                                 .map((i: any) =>
                                     <Col md={4} key={i.id}>
-                                        <CardShopItem id={i.id} title={i.title} price={i.price} imgUrl={i.imgUrl}/>
+                                        <CardShopItem id={i.id} title={i.title} price={i.price} img={i.img}/>
                                     </Col>
                                 )}
                         </Row>

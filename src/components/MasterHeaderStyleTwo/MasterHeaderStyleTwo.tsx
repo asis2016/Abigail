@@ -32,11 +32,9 @@ export const MasterHeaderStyleTwo: FC<IProps> = (props) => {
         <Carousel>
             {MasterHeaderStyleTwoCarouselContent.map((item) =>
                 <div key={item.id}
-                    className="carousel-item"
+                     className="carousel-item"
                      style={{backgroundImage: "url(" + require("../../assets/images/" + item.img) + ")"}}>
                     <div className="overlay"></div>
-
-
                     <div className="container carousel-item-content">
                         <div className="row">
                             <div className="col-md-8 offset-md-2">

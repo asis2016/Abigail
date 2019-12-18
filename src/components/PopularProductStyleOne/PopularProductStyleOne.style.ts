@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import {DefaultStyle} from "../../assets/style/style";
+import {color, DefaultStyle} from "../../assets/style/style";
 
 export const PopularProductStyleOneBase = styled.div`
 
   padding: ${DefaultStyle.sectionPaddingTopBottom} 0px;
+  
+  position: relative;
+  z-index: 2;
+  background-color: ${color.white};
   
 
 `;

@@ -3,13 +3,12 @@ import {FeatureStyleFourBase} from "./FeatureStyleFourBase.style";
 import {Col, Container, Row} from "react-bootstrap";
 
 
-
 export const FeatureStyleFourContent = [
     {
         id: 0,
         title: 'Auctor massa quis, bibendum massa.',
         faIcon: 'plane',
-        img: 'feature-8.jpg',
+        img: 'f-5.jpg',
         price: 299
     },
     {
@@ -33,10 +32,14 @@ export const FeatureStyleFour: FC<IProps> = (props) => {
                 <div className="overlay"></div>
                 {FeatureStyleFourContent.map((item) =>
                     <Col
-                        style={{backgroundImage: "url(" + require("../../assets/images/" + item.img) + ")"}}>
-                        <h2>{item.title}</h2>
-                        <p className="price">from ${item.price}</p>
-                        <button className="btn btn-primary-outline-erina">Eine Reservierung machen</button>
+                        style={{backgroundImage: "url(" + require("../../assets/images/" + item.img) + ")"}}
+                        key={item.id}
+                    >
+                        <h1>{item.title}</h1>
+                        <h1>from $ {item.price}</h1>
+                        <button className="btn btn-primary-outline">
+                            Eine Reservierung machen
+                        </button>
                     </Col>
                 )}
             </Row>

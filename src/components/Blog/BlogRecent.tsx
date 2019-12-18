@@ -1,10 +1,12 @@
 import React, {Component} from "react";
 import axios from "axios";
-import {Container, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import {BlogRecentBase} from "./BlogRecent.style";
 import {APICollection} from "../../server/config";
 import {CardBlog} from "../CardBlog/CardBlog";
-import {TitleCaptionSection} from "../TitleCaptionSection/SectionTitleCaption";
+import {TitleCaptionSection} from "../TitleCaptionSection/TitleCaptionSection";
+import {faIcon} from "../../assets/style/style";
+import {TitleCaptionSectionExploreAll} from "../TitleCaptionSectionExploreAll/TitleCaptionSectionExploreAll";
 
 
 interface IProps {
@@ -52,7 +54,7 @@ class BlogRecent extends Component<IProps, IState> {
     public getBlogTag = (id: string): any => {
         const tags = this.state.tags;
         return <>
-            {tags.filter((i: any) => i.id === id).map((i: any) => <>{i.title}</>)}
+            {tags.filter((i: any) => i.id === id).map((i: any) => <span key={i.id}>{i.title}</span>)}
         </>;
     };
 
@@ -62,7 +64,7 @@ class BlogRecent extends Component<IProps, IState> {
     public getBlogAuthor = (id: string): any => {
         const author = this.state.authors;
         return <>
-            {author.filter((i: any) => i.id === id).map((i: any) => <>{i.name}</>)}
+            {author.filter((i: any) => i.id === id).map((i: any) => <span key={i.id}>{i.name}</span>)}
         </>
     };
 
@@ -93,6 +95,9 @@ class BlogRecent extends Component<IProps, IState> {
                     )}
 
                 </Row>
+
+                <TitleCaptionSectionExploreAll url={`Blogging`}/>
+
             </Container>
         </BlogRecentBase>
     }

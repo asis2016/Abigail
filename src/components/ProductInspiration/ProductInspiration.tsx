@@ -1,44 +1,47 @@
 import {Col, Row} from "react-bootstrap";
 import React from "react";
 import {ProductInspirationBase} from "./ProductInspiration.style";
+import {faIcon} from "../../assets/style/style";
 
 const yo = [
     {
         id: 1,
-        imgUrl: 'fi-14.jpg',
-        title: 'At veros'
+        imgUrl: 'fi-5.jpg',
+        title: 'Quo Bergen kalt magni'
     },
     {
         id: 2,
         imgUrl: 'fi-17.jpg',
-        title: 'At veros'
+        title: 'Inventore veritatis'
     },
     {
         id: 3,
-        imgUrl: 'fi-5.jpg',
-        title: 'At veros'
+        imgUrl: 'fi-21.jpg',
+        title: 'Accusamus et iusto odi'
     },
     {
         id: 4,
-        imgUrl: 'fi-10.jpg',
-        title: 'At veros'
+        imgUrl: 'fi-16.jpg',
+        title: 'Mauris finibus liberas'
     }
 ];
 
 export const ProductInspiration = () => {
     return <ProductInspirationBase>
-        <Row>
-            <Col>
-                <h1>More Inspiration</h1>
-            </Col>
-        </Row>
         <Row className="row-two">
             {yo.map((i) =>
-                <Col style={{backgroundImage: 'url(' + require('../../assets/images/blog/' + i.imgUrl) + ')'}}>
+                <Col style={{backgroundImage: 'url(' + require('../../assets/images/blog/' + i.imgUrl) + ')'}}
+                     key={i.id}
+                >
 
-                    <div className="caption">
-                        <h2>{i.title}</h2>
+                    <div className="detail">
+                        <h3>{i.title}</h3>
+                        <button className="btn btn-secondary">
+                            <span className="mr-2">Explore</span> <i className={faIcon.more}></i>
+                        </button>
                     </div>
+
+                    <div className="overlay"></div>
 
                 </Col>
             )}

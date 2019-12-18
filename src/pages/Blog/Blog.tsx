@@ -26,7 +26,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
     };
 
     componentDidMount(): void {
-        axios.get('http://localhost:9003/blog?_page=3&_limit=5')
+        axios.get(APICollection.apiBlog + `?_page=2&_limit=5`)
             .then(result => {
                 this.setState({posts: result.data})
             });
@@ -75,7 +75,7 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
 
             {/* JumboTron Component */}
             <TitleCaptionJumbotron title={"Blog"}
-                       content={"Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS"}
+                                   content={"freshly from our blog."}
             />
 
             <Container>
@@ -87,9 +87,9 @@ class Blog extends Component<RouteComponentProps<any>, IState> {
                         <h3 className={"mt-5 mb-3"}>Popular Tags</h3>
                         <ul className="list-group list-group-flush">
                             {tags.map((i) =>
-                                <>
-                                    <ListGroupMenu title={i.title} url={'http:goog.gl'} id={i.id}/>
-                                </>
+                                <li className="list-group-item" key={i.id}>
+                                    <ListGroupMenu title={i.title} url={`google.com`} id={i.id}/>
+                                </li>
                             )}
                         </ul>
 

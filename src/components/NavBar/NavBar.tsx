@@ -10,12 +10,11 @@ interface IProps {
 export const NavBar: FC<IProps> = () => {
     return <NavBarBase>
         <div className="container-fluid navbar-primary">
-
             <div className="row">
                 <Col md={3} className="col-one">
-                    <Navbar.Brand href="#home">
-                        Abigail Shopping
-                    </Navbar.Brand>
+                    <Link to={"/"} className="navbar-brand">
+                        <img src={require('../../assets/images/logo.png')} alt=""/>
+                    </Link>
                 </Col>
                 <Col md={6} className="col-two">
                     <div className="input-group">
@@ -50,17 +49,19 @@ export const NavBar: FC<IProps> = () => {
 
         </div>
 
-        <div className="container navbar-secondary">
+        <div className="container-fluid navbar-secondary">
 
             <div className="row">
                 <Col md={2} className="col-one">
-                    <i className={faIcon.gift}></i> 50% Off!
+                    <p>
+                        <i className={faIcon.gift}></i> <span className="ml-1">Woooho! Christmas Sale is on.</span>
+                    </p>
                 </Col>
                 <Col md={8} className="col-two">
                     <Nav className="mr-auto">
                         <NavDropdown title="Shop" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="http://googl.gl">
-                                <Link to={"/shop/7"}>Shop</Link>
+                                <Link to={"/shop/6"}>Shop</Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item href="http://googl.gl">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="http://googl.gl">Something</NavDropdown.Item>
@@ -74,7 +75,9 @@ export const NavBar: FC<IProps> = () => {
                     </Nav>
                 </Col>
                 <Col md={2} className="col-three">
-                    <i className={faIcon.delivery}></i> 50% Off!
+                    <p>
+                        <i className={faIcon.delivery}></i> <span className="ml-1">50 % delivery off on every purchase.</span>
+                    </p>
                 </Col>
             </div>
 

@@ -15,6 +15,13 @@ export const CardShopItemBase = styled.div`
       color: ${DefaultStyle.secondaryColorTwo};
   }
   
+  .product-img{
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      width: 100%;
+  }
+  
   .price{
     color: ${DefaultStyle.primaryColor} !important; 
   }
