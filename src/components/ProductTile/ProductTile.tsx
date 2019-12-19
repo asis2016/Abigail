@@ -1,11 +1,13 @@
-import React, {Component} from "react";
-import {Button, Modal} from "react-bootstrap";
+import React, {Component, FC} from "react";
+import {Badge, Button, Col, Container, Form, Modal, Row} from "react-bootstrap";
 import axios from "axios";
 import {APICollection} from "../../server/config";
 import {ProductTileBase} from "./ProductTile.style";
 import {TitleCaptionSection} from "../TitleCaptionSection/TitleCaptionSection";
 import {CardProductTile} from "../CardProductTile/CardProductTile";
 import {TitleCaptionSectionExploreAll} from "../TitleCaptionSectionExploreAll/TitleCaptionSectionExploreAll";
+import {faIcon} from "../../assets/style/style";
+import {axiosInstance} from "../../server/axios";
 
 interface IProps {
     page: number;
@@ -35,18 +37,9 @@ export class ProductTile extends Component<IProps, IState> {
 
     render() {
         const products = this.state.product;
-        console.log(products)
-
-        const showModal = (): any => {
-            return <Modal show={true}
-                          onHide={() => false}>
-                <Modal.Body>
-                    asd </Modal.Body>
-            </Modal>
-        };
-
         return <ProductTileBase>
             <div className="container">
+                {/* Title Caption */}
                 <TitleCaptionSection title={"Wedding Dress Collection"}
                                      caption={"Aenean eget turpis sagittis massa porttitor convallis."}/>
 
@@ -55,14 +48,18 @@ export class ProductTile extends Component<IProps, IState> {
                         <div className="col-md-2" key={i.id}>
                             <CardProductTile id={i.id}
                                              title={i.title}
+                                             price={i.price}
+                                             dealPrice={i.dealPrice}
+                                             size={i.size}
+                                             color={i.color}
+                                             sku={i.sku}
                                              img={i.img}
-                            />
+                                             category={i.category}/>
                         </div>
                     )}
                 </div>
-
+                {/* Explore Link*/}
                 <TitleCaptionSectionExploreAll url={'shop/1'}/>
-
             </div>
         </ProductTileBase>
     }

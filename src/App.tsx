@@ -19,15 +19,16 @@ class App extends Component {
                 <NavBar/>
 
                 <Switch>
+                    <Route exact path="/">
+                        <Home/>
+                    </Route>
                     <Route path={"/blog"} exact component={Blog}/>
                     <Route path={"/blog-item/:id"} exact component={BlogItem}/>
                     <Route path={"/shop/:catID"}>
                         <Route component={Shop}/>
                     </Route>
                     <Route path={"/shop-item/:id"} exact component={ShopItem}/>
-                    <Route exact path="/">
-                        <Home/>
-                    </Route>
+
                     <Route path="*">
                         <FourZeroFour/>
                     </Route>

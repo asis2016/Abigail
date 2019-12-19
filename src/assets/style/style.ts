@@ -69,5 +69,6 @@ export const faIcon = {
     calendar: 'far fa-calendar-check',
     more: 'fas fa-angle-double-right',
     star: 'fas fa-star',
+    close: 'far fa-times-circle'
 };
 

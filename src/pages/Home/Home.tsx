@@ -17,12 +17,13 @@ export const Home = () => {
         {/*PopularProductStyleOne Component*/}
         <PopularProductStyleOne page={1} limit={3} categoryID={2}/>
 
-
+        {/* Feature Style */}
         <FeatureStyleFour title={'a'} caption={'a'}/>
 
         {/* Product Tile */}
         <ProductTile page={1} limit={10} categoryID={6}/>
 
+        {/* Product Inspiration */}
         <ProductInspiration/>
 
         {/* From the Blog */}
