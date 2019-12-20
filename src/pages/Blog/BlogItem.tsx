@@ -4,6 +4,7 @@ import axios from "axios";
 import {Col, Container, Row} from "react-bootstrap";
 import {BlogItemBase} from "./BlogItem.style";
 import {APICollection} from "../../server/config";
+import {TestProduct} from "../../model/TestProduct";
 
 
 interface IProps {

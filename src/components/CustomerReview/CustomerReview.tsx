@@ -5,7 +5,6 @@ import {faIcon} from "../../assets/style/style";
 import {CustomerReviewData} from "../../server/review";
 import {userData} from "../../server/userdata";
 
-
 interface IProps {
     productId: number;
 }
@@ -23,7 +22,7 @@ export const CustomerReview: FC<IProps> = (props) => {
 
                         {CustomerReviewData.filter((i) => i.productId === props.productId)
                             .map((i) =>
-                                <div className="media">
+                                <div className="media" key={i.id}>
 
                                     {userData.filter((childI) => childI.id === i.user)
                                         .map((childItem) =>

@@ -21,6 +21,7 @@ interface IState {
 }
 
 class Shop extends Component<RouteComponentProps<any>, IState> {
+    private yo: any;
 
     constructor(props: RouteComponentProps) {
         super(props);
@@ -41,25 +42,21 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
         axios.get(APICollection.apiCategory)
             .then(data => {
                 this.setState({categorys: data.data})
-            })
+            });
     };
 
     render() {
-
         const products = this.state.products;
         const categorys = this.state.categorys;
         return <>
 
             {/* JumboTron Component */}
             <TitleCaptionJumbotron title={"Shop"}
-                       content={"Ut enim ad minima veniam, quis nostrum exercitationem ullam."}
+                                   content={"Ut enim ad minima veniam, quis nostrum exercitationem ullam."}
             />
-
             <Container className={"pt-2"}>
-
                 <Row>
                     <Col md={2}>
-
                         {/* Category */}
                         <h3 className={"mt-5 mb-3"}>Category</h3>
                         <ul className="list-group list-group-flush">
@@ -69,11 +66,8 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                                 </li>
                             )}
                         </ul>
-
                     </Col>
-
                     <Col md={9}>
-
                         <Row>
                             {products.filter((i: any) => i.category === this.state.categoryID)
                                 .map((i: any) =>
@@ -82,9 +76,7 @@ class Shop extends Component<RouteComponentProps<any>, IState> {
                                     </Col>
                                 )}
                         </Row>
-
                     </Col>
-
                 </Row>
             </Container>
         </>

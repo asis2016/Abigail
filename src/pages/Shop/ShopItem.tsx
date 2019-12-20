@@ -1,4 +1,4 @@
-import {Badge, Col, Container, Form, NavDropdown, Row} from "react-bootstrap"
+import {Badge, Col, Container, Form, Row} from "react-bootstrap"
 import React, {Component} from "react";
 import {ShopItemBase} from "./ShopItem.style";
 import {Link, RouteComponentProps, withRouter} from 'react-router-dom';
@@ -6,7 +6,6 @@ import axios from 'axios';
 import {APICollection} from "../../server/config";
 import {BreadCrumb} from "../../components/BreadCrumb/BreadCrumb";
 import {faIcon} from "../../assets/style/style";
-import {Base} from "../../model/base";
 import {CustomerReview} from "../../components/CustomerReview/CustomerReview";
 
 interface IValues {
@@ -20,6 +19,8 @@ interface IFormState {
     category: any;
     values?: IValues[];
 }
+
+
 
 class ShopItem extends Component<RouteComponentProps<any>, IFormState> {
 
@@ -53,6 +54,7 @@ class ShopItem extends Component<RouteComponentProps<any>, IFormState> {
     };
 
     render() {
+
         const products = this.state.product;
 
         return <ShopItemBase img={products.img}>

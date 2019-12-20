@@ -30,11 +30,11 @@ h3{
     letter-spacing: 1px;
 }
 
-p, a, .nav-link, .text-muted, label{
+p, a, .nav-link, .text-muted, label,th,td{
     font-family: ${font.secondary.family};
 }
 
-p, label{
+p, label, th, td{
     font-size: 14px;
     color: ${color.text};
 }
