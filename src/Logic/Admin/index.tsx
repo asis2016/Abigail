@@ -14,8 +14,11 @@ export const AdminIndex = () => {
             <Row>
                 {/* Navigation */}
                 <AdminNavigation/>
+
                 {/* Main Content */}
                 <AdminDashboard/>
+
+
 
             </Row>
         </Container>

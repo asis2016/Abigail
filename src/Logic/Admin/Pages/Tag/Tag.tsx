@@ -16,6 +16,8 @@ export const AdminTag: FC = (props) => {
             .then(response => setTags(response))
     }, [])
 
+    console.log(tags.length)
+
 
     return <>
         <AdminHeader/>
@@ -34,16 +36,18 @@ export const AdminTag: FC = (props) => {
                             <h3>Tag Lists</h3>
                         </Card.Header>
                         <Card.Body>
-                            <TableStrip
-                                thead={['#', 'id', 'Title']}
-                                tbodys={tags.map((item) =>
-                                    <tr>
-                                        <td></td>
-                                        <td>{item['id']}</td>
-                                        <td>{item['title']}</td>
-                                    </tr>
-                                )}
-                            />
+                            {tags.length === 0 ? 'Not record found.' :
+                                <TableStrip
+                                    thead={['#', 'id', 'Title']}
+                                    tbodys={tags.map((item) =>
+                                        <tr>
+                                            <td></td>
+                                            <td>{item['id']}</td>
+                                            <td>{item['title']}</td>
+                                        </tr>
+                                    )}
+                                />
+                            }
                         </Card.Body>
                     </Card>
 

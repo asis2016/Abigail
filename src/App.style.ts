@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {color, DefaultStyle, font} from "./assets/style/style";
+import {color, DefaultStyle, font} from "./Logic/Public/Assets/style/style";
 
 interface IProps {
     template?: string;

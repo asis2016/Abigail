@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
 import {AppBase} from "./App.style";
-import Shop from "./pages/Shop/Shop";
+import Shop from "./Logic/Public/Pages/Shop/Shop";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Home from "./pages/Home/Home";
-import {FooterMenuStyleTwo} from "./components/FooterMenuStyleTwo/FooterMenuStyleTwo";
-import ShopItem from "./pages/Shop/ShopItem";
-import Blog from "./pages/Blog/Blog";
-import BlogItem from "./pages/Blog/BlogItem";
-import {NavBar} from "./components/NavBar/NavBar";
-import {FourZeroFour} from "./pages/404/404";
-import {getAllCategory} from "./model/Product";
-import {AdminDashboard} from "./Logic/Admin/Pages/Dashboard/Dashboard";
+import Home from "./Logic/Public/Pages/Home/Home";
+import {FooterMenuStyleTwo} from "./Logic/Public/components/FooterMenuStyleTwo/FooterMenuStyleTwo";
+import ShopItem from "./Logic/Public/Pages/Shop/ShopItem";
+import Blog from "./Logic/Public/Pages/Blog/Blog";
+import BlogItem from "./Logic/Public/Pages/Blog/BlogItem";
+import {NavBar} from "./Logic/Public/components/NavBar/NavBar";
 import {AdminIndex} from "./Logic/Admin";
 import {AdminProduct} from "./Logic/Admin/Pages/Product/Product";
 import {AdminTag} from "./Logic/Admin/Pages/Tag/Tag";
+import {Contact} from "./Logic/Public/Pages/Contact/Contact";
+import {About} from "./Logic/Public/Pages/About/About";
 
 class App extends Component {
 
@@ -21,40 +20,54 @@ class App extends Component {
         return <AppBase>
             <BrowserRouter>
                 <Switch>
-                        {/* Home */}
-                        <Route exact path="/">
-                            <NavBar/>
-                            <Home/>
-                            <FooterMenuStyleTwo/>
-                        </Route>
+                    {/* Home */}
+                    <Route exact path="/">
+                        <NavBar/>
+                        <Home/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
 
-                        {/* Blog */}
-                        <Route path={"/blog"} exact>
-                            <NavBar/>
-                            <Route component={Blog}/>
-                            <FooterMenuStyleTwo/>
-                        </Route>
+                    {/* Blog */}
+                    <Route path={"/blog"} exact>
+                        <NavBar/>
+                        <Route component={Blog}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
 
-                        {/* Blog Item*/}
-                        <Route path={"/blog-item/:id"} exact>
-                            <NavBar/>
-                            <Route component={BlogItem}/>
-                            <FooterMenuStyleTwo/>
-                        </Route>
+                    {/* Blog Item*/}
+                    <Route path={"/blog-item/:id"} exact>
+                        <NavBar/>
+                        <Route component={BlogItem}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
 
-                        {/* Shop */}
-                        <Route path={"/shop/:catID"}>
-                            <NavBar/>
-                            <Route component={Shop}/>
-                            <FooterMenuStyleTwo/>
-                        </Route>
+                    {/* Shop */}
+                    <Route path={"/shop/:catID"} exact>
+                        <NavBar/>
+                        <Route component={Shop}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
 
-                        {/* Shop Item */}
-                        <Route path={"/shop-item/:id"} exact>
-                            <NavBar/>
-                            <Route component={ShopItem}/>
-                            <FooterMenuStyleTwo/>
-                        </Route>
+                    {/* Shop Item */}
+                    <Route path={"/shop-item/:id"} exact>
+                        <NavBar/>
+                        <Route component={ShopItem}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
+
+                    {/* About Us */}
+                    <Route path={"/about"}>
+                        <NavBar/>
+                        <Route component={About}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
+
+                    {/* Contact Us */}
+                    <Route path={"/contact"} exact>
+                        <NavBar/>
+                        <Route component={Contact}/>
+                        <FooterMenuStyleTwo/>
+                    </Route>
 
                     {/* Customer Account */}
 
